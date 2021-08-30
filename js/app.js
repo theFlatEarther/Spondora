@@ -13,6 +13,12 @@ const questionNumber4 = [];
 const questionNumber5 = [];
 const questionNumber6 = [];
 
+// final playlist recommendation
+let recommendedPlayList = [];
+
+// question element in html
+const questionElem = document.getElementById('question')
+
 // __________________________________ Constructor Functions  __________________________________ 
 
 // create a song object, accept name, artist, album, and optional img artwork
@@ -26,6 +32,35 @@ function Song(name, artist, album, img=null) {
 // __________________________________ Prototype Methods __________________________________ 
 
 // __________________________________ Global Functions __________________________________ 
+
+// make an html elem, can insert text and/or attribute
+function _makeElem(tag, parent, text=null, attribute=null, attributeValue=null) {
+  let Elem = document.createElement(tag);
+  parent.appendChild(Elem);
+  if (text) {
+    Elem.textContent = text;
+  }
+  if (attribute) {
+    Elem.setAttribute(attribute, attributeValue);
+  }
+  return Elem;
+}
+
+// return playlist from recommended array, append ul and li per song
+function generatePlaylist() {
+  let ulElem = document.createElement('ul')
+  questionElem.appendChild(ulElem)
+  for (let song of recommendedPlayList) {
+    const liElem = document.createElement('li')
+    liElem.textContent = `${song.name} by ${song.artist}. Album ${song.album}.`;
+    ulElem.appendChild(liElem)
+  }
+}
+
+// add song to recommended array
+function addSongToPlayList(song) {
+  recommendedPlayList.push(song);
+}
 
 // __________________________________ Event Listeners  __________________________________ 
 
@@ -159,12 +194,20 @@ new Song ('BeatBox', 'SpotemGottem', 'Beat Box', Insta)
 // question 6
 new Song('my heart will go on', 'celine dion', 'titanic');
 new Song('cornfield chase’, ‘hans zimmer’, ‘interstellar');
+new Song('no time for caution', 'hans zimmer', 'interstellar');
 new Song("you’re the one that I want", 'john travolta, olivia newton-john', 'grease');
+new Song("hopelessly devoted to you", "john travolta, olivia newton-john", "grease");
 new Song('lose yourself', 'eminem', '8 mile');
+new Song("8 mile", "eminem", "8 mile");
 new Song("you’ll be in my heart", 'phil collins', 'tarzan');
+new Song("two worlds", "phil collins", "tarzan");
 new Song('edge of seventeen', 'stevie nicks', 'school of rock');
-new Song('dancing queen', 'abba', 'arrival');
+new Song("iron man", "black sabbath", "school of rock");
+new Song('dancing queen', 'abba', 'pulp fiction');
+new Song("satisfied mind", "johnny cash", "pulp fiction");
 new Song('mr. blue sky', 'electric light orchestra', 'guardians of the galaxy');
+new Song("lake shore drive", "aliotta haynes jeremiah", "guardians of the galaxy");
 new Song("don’t you (forget about me)", 'simple minds', 'the breakfast club');
 new Song('shallow', 'lady gaga, bradley cooper', 'a star is born');
+new Song("always remember us this way", "lady gaga, bradley cooper", "a star is born");
 
