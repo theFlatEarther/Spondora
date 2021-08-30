@@ -34,7 +34,7 @@ function Song(name, artist, album, img=null) {
 // question 5
 Song(name, artist, album, img?
 
-  new Song ('STAY'; 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU',Insta)
+  new Song ('STAY', 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU',Insta)
   new Song ('Low', 'Flo Rida & T-Pain', 'Mail on Sunday', Insta)
   new Song ('Because You Move Me', 'Tinlicker & Helsloot', 'Because You Move ', Insta)
   new Song('One Dance', 'Drake', 'single', Insta )
@@ -57,8 +57,59 @@ Song(name, artist, album, img?
 =======
 // question 1
 // question 2
+
 // question 3
+//60's music
+new Song ('I Say A Little Prayer You', 'Aretha Franklin', 'Aretha Now',Facebook);
+new Song ('Creedence Clearwater Revival', 'Born on the Bayou', 'Live in Europe',Facebook)
+new Song ('My Girl', 'The Temptations', 'The Temptations Sing Smokey',Facebook )
+new Song ('What\’s New Pussycat?', 'Tom Jones', 'What\’s New Pussycat?', Facebook)
+new Song ('My Cherie Amour', 'Stevie Wonder', 'My Cherie Amour', Facebook)
+//70's music
+new Song ('Dreams', 'Fleetwood Mac', 'Rumours', Insta)
+new Song ('Sweet Emotion', 'Aerosmith', 'Toys in The Attic', Insta)
+new Song ('Changes', 'David Bowie', 'Hunky Dory', Insta)
+new Song ('What You Won’t Do For Love', 'Bobby Caldwell', 'Bobby Caldwell', Insta)
+new Song ('Let’s Get It On', 'Marvin Gaye', 'Let\’s Get It On', N/a)
+//80's music
+new Song ('Celebration', 'Kool & The Gang', 'Celebrate!', Insta)
+new Song ('Could You Be Loved', 'Bob Marley & The Wailers', 'Uprising', Insta)
+new Song ('Whip It', 'Devo', 'Freedom Of Choice', Insta)
+new Song ('Never Too Much', 'Luther Vandross', 'Never Too Much', Insta)
+new Song ('Waiting For A Girl Like You', 'Foreigner', '4', Insta)
+//90's music
+new Song ('Wannabe', 'Spice Girls', 'Spice', Insta)
+new Song ('Wonderwall', 'Oasis', 'What\’s the Story Morning Glory?', Insta)
+new Song ('Man in The Box', 'Alice in Chains', 'Facelift',Insta)
+new Song ('Creep', 'TLC', 'Ooooooohhh… On the TLC Tip', Insta)
+new Song ('California Love', 'Tupac Shakur', 'All Eyes on Me',N/a)
+//00's music
+new Song ('In Da Club', '50 Cent', 'Get Rich or Die Tryin’',Insta)
+new Song ('Party Up', 'DMX', '… And Then There Was X', Insta)
+new Song ('She Will Be Loved', 'Maroon 5', 'Songs About Jane', Insta)
+new Song ('Sugar, We’re Going Down', 'Fall Out Boy', 'From Under the Cork Tree', Insta)
+new Song ('Hott in Herre', 'Nelly', 'Nellyville', Insta)
+
+
 // question 4
+//Fall/Winter
+new Song ('If I Could Fly', 'One Direction', 'Made in the A.M.', Insta)
+new Song ('September', 'Earth, Wind & Fire', 'The Best of Earth, Wind & Fire, Vol. 1', Insta)
+new Song ('Only Exception', 'Paramore', 'Brand New Eyes', Insta)
+new Song ('Maps', 'Yeah Yeah Yeahs', 'Fever to Tell', Insta)
+new Song ('Ho Hey', 'Lumineers', 'The Lumineers', Insta)
+//Spring
+new Song ('Hey There Delilah', 'Plain White T\’s', 'All That We Needed and Every Second Counts', Insta)
+new Song ('OTW', 'Khalid', 'OTW', Insta)
+new Song ('What Do You Mean', 'Justin Bieber', 'Purpose', Insta)
+new Song ('Infinity Guitars', 'Sleigh Bells', 'Treats', Insta)
+new Song ('Closer', 'The Chainsmokers, Halsey', 'Collage', Insta) 
+//Summer
+new Song ('Shape Of You', 'Ed Sheeran', '+', Insta)
+new Song ('This is What You Came For', 'Calvin Harris', 'This is What You Came For', Insta)
+new Song ('Zanzibar', 'Kamaliza', 'Zanzibar', Insta)
+new Song ('Essence', 'WizKid', 'Made in Lagos', Insta)
+new Song ('BeatBox', 'SpotemGottem', 'Beat Box', Insta)
 
 
 
