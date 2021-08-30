@@ -66,9 +66,86 @@ function addSongToPlayList(song) {
 
 // __________________________________ Calls __________________________________ 
 
-// question 5
 
-new Song ('STAY', 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU',Insta)
+Song(name, artist, album, img?
+
+
+// question 1
+new Song('Hotel California', 'The Eagles', 'Hotel California', roadTrip);
+new Song('Beast of Burden', 'The Rolling Stones', 'Some Girls', roadTrip);
+new Song('Dreams', 'Fleetwood Mac', 'Rumours', roadTrip);
+new Song('Easy', 'Commodores', 'Commodores', roadTrip);
+new Song('Here Comes the Sun', 'The Beatles', 'Abbey Road', roadTrip);
+new Song('Take me home, Country Roads', 'John Denver', 'Poems, Prayers & Promises', camp);
+new Song('Sunflower', 'Post Malone and Swae Lee', 'Spider-Man: Into the Spider-Verse', camp);
+new Song('Rhiannon', 'Fleetwood Mac', 'Life Becoming a Landslide', camp);
+new Song('Badmoon Rising', 'Creedence Clearwater Revival', 'Green River', camp);
+new Song("You've Got a Friend In Me", 'Randy Newman', 'Toy Story', camp);
+new Song('Controlla', 'Idealism', 'Rainy Evening', study);
+new Song('My New Love', 'Elijah Who', 'Gentle Boy', Study);
+new Song('Jazzy Afternoon', 'LoFi Waiter', 'A Night In Tokyo', study);
+new Song('Affection', 'Jinsang', 'Life', study);
+new Song('Aruarian dance', 'Nujabes', 'Samurai Champloo Music Record: Departure', study );
+new Song('We Found Love', 'Rihanna and Calvin Harris', 'Talk That Talk', party);
+new Song('I Gotta Feeling', 'Black Eyed Peas', 'The E.N.D.', party);
+new Song('Bad Romance', 'Lady Gaga', 'The Fame Monster', party);
+new Song("We Can't Stop", 'Miley Cyrus', 'Bangerz', party);
+// question 2
+
+new Song('Pumped Up Kicks', 'Foster The People', 'Pumped Up Kicks', ca);
+new Song('Californiacation', 'Red Hot Chili Peppers', 'Californiacation', ca);
+new Song('Santeria', 'Sublime', 'Gold', ca);
+new Song('Semi-Charmed Life', 'Third Eye Blind', 'Third Eye Blind', ca);
+new Song('Fly', 'Sugar Ray', 'Floored', ca);
+new Song('Rest of My Life', 'Parker McCollum', 'Rest of My Life', tx);
+new Song('No Vacancy', 'Treaty Oak Revival', 'No Vacancy', tx);
+new Song('Ride the Lightning', 'Warren Zeiders', 'Ride the Lightning', tx);
+new Song('Teasure', 'Laci Kaye Booth', 'Laci Kaye Booth', tx);
+new Song('Hell in a Handbag', 'Alyssa Micaela', 'Hell in a Handbag', il);
+new Song('Swervo', 'G Herbo, Southside', 'Swervo', il);
+new Song('All Night Longer', 'Sammy Adams', 'All Night Longer', li);
+new Song('Sorority Girl', 'Luke Brian', 'Spring Break... Here to Party', li);
+new Song('Doeses and Mimosas', 'Cherub', 'Year of the Caprese', li);
+new Song('Dead Presidents II', 'JAY-Z', 'Reasonable Doubt', ny);
+new Song('I Need a Girl Part II', 'Diddy', ' The Saga Continues', ny);
+new Song('Big Poppa', 'The Notorious B.I.G.', 'Ready to Die', ny);
+new Song('So Far Away', 'Carole King', 'In Concer', ny);
+new Song("If I Ain't Got You", 'Alicia Keys', 'The Diary of Alicia Keys', ny);
+
+// question 3
+//60's music
+new Song ('I Say A Little Prayer You', 'Aretha Franklin', 'Aretha Now',Facebook);
+new Song ('Creedence Clearwater Revival', 'Born on the Bayou', 'Live in Europe',Facebook)
+new Song ('My Girl', 'The Temptations', 'The Temptations Sing Smokey',Facebook )
+new Song ('What\’s New Pussycat?', 'Tom Jones', 'What\’s New Pussycat?', Facebook)
+new Song ('My Cherie Amour', 'Stevie Wonder', 'My Cherie Amour', Facebook)
+//70's music
+new Song ('Dreams', 'Fleetwood Mac', 'Rumours', Insta)
+new Song ('Sweet Emotion', 'Aerosmith', 'Toys in The Attic', Insta)
+new Song ('Changes', 'David Bowie', 'Hunky Dory', Insta)
+new Song ('What You Won’t Do For Love', 'Bobby Caldwell', 'Bobby Caldwell', Insta)
+new Song ('Let’s Get It On', 'Marvin Gaye', 'Let\’s Get It On', N/a)
+//80's music
+new Song ('Celebration', 'Kool & The Gang', 'Celebrate!', Insta)
+new Song ('Could You Be Loved', 'Bob Marley & The Wailers', 'Uprising', Insta)
+new Song ('Whip It', 'Devo', 'Freedom Of Choice', Insta)
+new Song ('Never Too Much', 'Luther Vandross', 'Never Too Much', Insta)
+new Song ('Waiting For A Girl Like You', 'Foreigner', '4', Insta)
+//90's music
+new Song ('Wannabe', 'Spice Girls', 'Spice', Insta)
+new Song ('Wonderwall', 'Oasis', 'What\’s the Story Morning Glory?', Insta)
+new Song ('Man in The Box', 'Alice in Chains', 'Facelift',Insta)
+new Song ('Creep', 'TLC', 'Ooooooohhh… On the TLC Tip', Insta)
+new Song ('California Love', 'Tupac Shakur', 'All Eyes on Me',N/a)
+//00's music
+new Song ('In Da Club', '50 Cent', 'Get Rich or Die Tryin’',Insta)
+new Song ('Party Up', 'DMX', '… And Then There Was X', Insta)
+new Song ('She Will Be Loved', 'Maroon 5', 'Songs About Jane', Insta)
+new Song ('Sugar, We’re Going Down', 'Fall Out Boy', 'From Under the Cork Tree', Insta)
+new Song ('Hott in Herre', 'Nelly', 'Nellyville', Insta)
+
+// question 5
+new Song ('STAY'; 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU',Insta)
 new Song ('Low', 'Flo Rida & T-Pain', 'Mail on Sunday', Insta)
 new Song ('Because You Move Me', 'Tinlicker & Helsloot', 'Because You Move ', Insta)
 new Song('One Dance', 'Drake', 'single', Insta )
@@ -88,11 +165,28 @@ new Song ('1985','bowling for Soup','A Hangover You Don\'t Deserve',Myspace)
 new Song ('One Week','Barenaked Ladies','Stunt',Myspace)
 new Song ('Misery Business','Paramore','Riot',Myspace)
 new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t You Fake It',Myspace)
-// question 1
-// question 2
-// question 3
-// question 4
 
+
+// question 4
+//Fall/Winter
+new Song ('If I Could Fly', 'One Direction', 'Made in the A.M.', Insta)
+new Song ('September', 'Earth, Wind & Fire', 'The Best of Earth, Wind & Fire, Vol. 1', Insta)
+new Song ('Only Exception', 'Paramore', 'Brand New Eyes', Insta)
+new Song ('Maps', 'Yeah Yeah Yeahs', 'Fever to Tell', Insta)
+new Song ('Ho Hey', 'Lumineers', 'The Lumineers', Insta)
+//Spring
+new Song ('Hey There Delilah', 'Plain White T\’s', 'All That We Needed and Every Second Counts', Insta)
+new Song ('OTW', 'Khalid', 'OTW', Insta)
+new Song ('What Do You Mean', 'Justin Bieber', 'Purpose', Insta)
+new Song ('Infinity Guitars', 'Sleigh Bells', 'Treats', Insta)
+new Song ('Closer', 'The Chainsmokers, Halsey', 'Collage', Insta) 
+//Summer
+new Song ('Shape Of You', 'Ed Sheeran', '+', Insta)
+new Song ('This is What You Came For', 'Calvin Harris', 'This is What You Came For', Insta)
+new Song ('Zanzibar', 'Kamaliza', 'Zanzibar', Insta)
+new Song ('Essence', 'WizKid', 'Made in Lagos', Insta)
+new Song ('BeatBox', 'SpotemGottem', 'Beat Box', Insta)
+//
 
 
 
