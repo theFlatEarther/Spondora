@@ -1,21 +1,23 @@
 # Software Requirements
 
 What is the vision of this product?
+
   1. To create a user experience where they can listen to carefully curated music playlists according to their unique preferences.  
 
 What pain point does this project solve?
-  1. Unsure of what to listen to and bored of their regular music. 
+
+  1. Unsure of what to listen to and bored of their regular music.
 
 Why should we care about your product?
-  1. Because its new and exiting and its more personalized 
 
+  1. Because its new and exiting and its more personalized
 
   # Scope (In/Out)
 
-  * IN - What will your product do? 
-    
-    > Customer will be greeted with a minimallistic splash page that will accept user input
-    > Personalized music suggestions based on user input 
+* IN - What will your product do?
+
+    > Customer will be greeted with a minimalistic splash page that will accept user input
+    > Personalized music suggestions based on user input
     > It will store those suggestion via local storage
     > It will also retrieve them from local storage and dispay them whenever the user wants
 
@@ -45,8 +47,3 @@ Why should we care about your product?
     3. They will answer a series of questions 
     4. Based on their answers they will be presented with a playlist
     5. They are free to goolge their songs at their own leisure
-
-
-
-
-  
