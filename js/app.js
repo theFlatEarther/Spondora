@@ -30,3 +30,24 @@ function Song(name, artist, album, img=null) {
 // __________________________________ Event Listeners  __________________________________ 
 
 // __________________________________ Calls __________________________________ 
+
+// question 1
+// question 2
+// question 3
+// question 4
+// question 5
+
+
+
+
+// question 6
+new Song('my heart will go on', 'celine dion', 'titanic');
+new Song('cornfield chase’, ‘hans zimmer’, ‘interstellar');
+new Song("you’re the one that I want", 'john travolta, olivia newton-john', 'grease');
+new Song('lose yourself', 'eminem', '8 mile');
+new Song("you’ll be in my heart", 'phil collins', 'tarzan');
+new Song('edge of seventeen', 'stevie nicks', 'school of rock');
+new Song('dancing queen', 'abba', 'arrival');
+new Song('mr. blue sky', 'electric light orchestra', 'guardians of the galaxy');
+new Song("don’t you (forget about me)", 'simple minds', 'the breakfast club');
+new Song('shallow', 'lady gaga, bradley cooper', 'a star is born');
