@@ -2,16 +2,17 @@
 
 // let the console know about Angela's core belief system
 console.log('Flat earth is real - Angela Dzodzomoney')
+console.log('I hate WHITE - David Hecker')
 
 // __________________________________ Global Variables __________________________________ 
 
 // arrays of songs by question number
-const questionNumber1 = [];
-const questionNumber2 = [];
-const questionNumber3 = [];
-const questionNumber4 = [];
-const questionNumber5 = [];
-const questionNumber6 = [[], [], [], [], [], [], [], [], [], [],];
+const questionNumber1 = [[],[],[],[]];
+const questionNumber2 = [[],[],[],[]];
+const questionNumber3 = [[],[],[],[],[]];
+const questionNumber4 = [[],[],[]];
+const questionNumber5 = [[],[],[],[]];
+const questionNumber6 = [[],[],[],[],[],[],[],[],[],[]];
 
 // final playlist recommendation
 let recommendedPlayList = [];
@@ -20,6 +21,11 @@ let recommendedPlayList = [];
 const questionElem = document.getElementById('question')
 const ulQuestionElem = document.getElementById('question_ul')
 
+let questionOneSong = null;
+let questionTwoSong = null;
+let questionThreeSong = null;
+let questionFourSong = null;
+let questionFiveSong = null;
 let questionSixSong = null;
 
 // __________________________________ Constructor Functions  __________________________________ 
@@ -32,8 +38,7 @@ function Song(name, artist, album, id) {
   this.id = id;
 }
 
-//ID organizer by question
-//making question
+//make the question
 //event handler
 //buttons for the pages
 
@@ -79,6 +84,80 @@ function generatePlaylist() {
 // }
 
 // return a random song from the applicable array based on user click
+function q1HandleClick() {
+
+  switch(event.target.id){
+    case 'q1a1':
+      questionOneSong = randomArrayItem(questionNumber1[0]);
+      console.log(questionOneSong)
+      break;
+    case 'q1a2':
+      questionOneSong = randomArrayItem(questionNumber1[1]);
+      console.log(questionOneSong)
+      break;
+    case 'q1a3':
+      questionOneSong = randomArrayItem(questionNumber1[2]);
+      console.log(questionOneSong)
+      break;
+    case 'q1a4':
+      questionOneSong = randomArrayItem(questionNumber1[3]);
+      console.log(questionOneSong)
+      break;
+  }
+}
+function q2HandleClick() {
+  
+  switch(event.target.id){
+    case 'q2a1':
+      questionTwoSong = randomArrayItem(questionNumber2[0]);
+      console.log(questionTwoSong)
+      break;
+    case 'q2a2':
+      questionTwoSong = randomArrayItem(questionNumber2[1])
+      console.log(questionTwoSong)
+      break;
+    case 'q2a3':
+      questionTwoSong = randomArrayItem(questionNumber2[2])
+      console.log(questionTwoSong)
+      break;
+    case 'q2a4':
+      questionTwoSong = randomArrayItem(questionNumber2[3])
+      console.log(questionTwoSong)
+      break;
+  }
+}
+function q3HandleClick() {
+  
+  switch(event.target.id){
+    case 'q3a1':
+      questionThreeSong = randomArrayItem(questionNumber3[0])
+      console.log(questionThreeSong)
+      break;
+    case 'q3a2':
+      questionThreeSong = randomArrayItem(questionNumber3[1])
+      console.log(questionThreeSong)
+      break;
+    case 'q3a3':
+      questionThreeSong = randomArrayItem(questionNumber3[2])
+      console.log(questionThreeSong)
+      break;
+    case 'q3a4':
+      questionThreeSong = randomArrayItem(questionNumber3[3])
+      console.log(questionThreeSong)
+      break;
+    case 'q3a5':
+      questionThreeSong = randomArrayItem(questionNumber3[3])
+      console.log(questionThreeSong)
+      break;
+  }
+}
+
+
+
+
+
+
+
 function q6HandleClick() {
 
   switch(event.target.id) {
@@ -127,137 +206,165 @@ function q6HandleClick() {
 
 // __________________________________ Event Listeners  __________________________________ 
 
+ulQuestionElem.addEventListener('click', q1HandleClick)
+ulQuestionElem.addEventListener('click', q2HandleClick)
+ulQuestionElem.addEventListener('click', q3HandleClick)
 ulQuestionElem.addEventListener('click', q6HandleClick)
 
 // __________________________________ Calls __________________________________ 
 
 // question 1
 //Roadtrip
-questionNumber1.push(new Song ('Hotel California', 'The Eagles', 'Hotel California', 1));
-questionNumber1.push(new Song ('Beast of Burden', 'The Rolling Stones', 'Some Girls', 1));
-questionNumber1.push(new Song ('Dreams', 'Fleetwood Mac', 'Rumours', 1));
-questionNumber1.push(new Song ('Easy', 'Commodores', 'Commodores', 1));
-questionNumber1.push(new Song ('Here Comes the Sun', 'The Beatles', 'Abbey Road', 1));
+questionNumber1[0].push(
+    new Song ('Hotel California', 'The Eagles', 'Hotel California',),
+    new Song ('Beast of Burden', 'The Rolling Stones', 'Some Girls'),
+    new Song ('Dreams', 'Fleetwood Mac', 'Rumours'),
+    new Song ('Easy', 'Commodores', 'Commodores'),
+    new Song ('Here Comes the Sun', 'The Beatles', 'Abbey Road'),
+),
 //Camping
-questionNumber1.push(new Song ('Take me home, Country Roads', 'John Denver', 'Poems, Prayers & Promises', 2));
-questionNumber1.push(new Song ('Sunflower', 'Post Malone and Swae Lee', 'Spider-Man: Into the Spider-Verse', 2));
-questionNumber1.push(new Song ('Rhiannon', 'Fleetwood Mac', 'Life Becoming a Landslide', 2));
-questionNumber1.push(new Song ('Badmoon Rising', 'Creedence Clearwater Revival', 'Green River', 2));
-questionNumber1.push(new Song ("You've Got a Friend In Me", 'Randy Newman', 'Toy Story', 2));
+questionNumber1[1].push(
+    new Song ('Take me home, Country Roads', 'John Denver', 'Poems, Prayers & Promises'),
+    new Song ('Sunflower', 'Post Malone and Swae Lee', 'Spider-Man: Into the Spider-Verse'),
+    new Song ('Rhiannon', 'Fleetwood Mac', 'Life Becoming a Landslide'),
+    new Song ('Badmoon Rising', 'Creedence Clearwater Revival', 'Green River'),
+    new Song ("You've Got a Friend In Me", 'Randy Newman', 'Toy Story'),
+),
 //Studying
-questionNumber1.push(new Song ('Controlla', 'Idealism', 'Rainy Evening', 3));
-questionNumber1.push(new Song ('My New Love', 'Elijah Who', 'Gentle Boy', 3));
-questionNumber1.push(new Song ('Jazzy Afternoon', 'LoFi Waiter', 'A Night In Tokyo', 3));
-questionNumber1.push(new Song ('Affection', 'Jinsang', 'Life', 3));
-questionNumber1.push(new Song ('Aruarian dance', 'Nujabes', 'Samurai Champloo Music Record: Departure', 3));
+questionNumber1[2].push(
+  new Song ('Controlla', 'Idealism', 'Rainy Evening'),
+  new Song ('My New Love', 'Elijah Who', 'Gentle Boy'),
+  new Song ('Jazzy Afternoon', 'LoFi Waiter', 'A Night In Tokyo'),
+  new Song ('Affection', 'Jinsang', 'Life'),
+  new Song ('Aruarian dance', 'Nujabes', 'Samurai Champloo Music Record: Departure'),
+),
 //Party
-questionNumber1.push(new Song ('We Found Love', 'Rihanna and Calvin Harris', 'Talk That Talk', 4));//4 again lol
-questionNumber1.push(new Song ('I Gotta Feeling', 'Black Eyed Peas', 'The E.N.D.', 4));
-questionNumber1.push(new Song ('Bad Romance', 'Lady Gaga', 'The Fame Monster', 4));
-questionNumber1.push(new Song ("We Can't Stop", 'Miley Cyrus', 'Bangerz', 4));
+questionNumber1[3].push(
+  new Song ('We Found Love', 'Rihanna and Calvin Harris', 'Talk That Talk'),//4 again lol
+  new Song ('I Gotta Feeling', 'Black Eyed Peas', 'The E.N.D.',),
+  new Song ('Bad Romance', 'Lady Gaga', 'The Fame Monster',),
+  new Song ("We Can't Stop", 'Miley Cyrus', 'Bangerz',),
+),
 // question 2
 //Cali
-questionNumber2.push(new Song ('Pumped Up Kicks', 'Foster The People', 'Pumped Up Kicks', 1));
-questionNumber2.push(new Song ('Californiacation', 'Red Hot Chili Peppers', 'Californiacation', 1));
-questionNumber2.push(new Song ('Santeria', 'Sublime', 'Gold', 1));
-questionNumber2.push(new Song ('Semi-Charmed Life', 'Third Eye Blind', 'Third Eye Blind', 1));
-questionNumber2.push(new Song ('Fly', 'Sugar Ray', 'Floored', 1));
+questionNumber2[0].push(
+  new Song ('Pumped Up Kicks', 'Foster The People', 'Pumped Up Kicks'),
+  new Song ('Californiacation', 'Red Hot Chili Peppers', 'Californiacation'),
+  new Song ('Santeria', 'Sublime', 'Gold'),
+  new Song ('Semi-Charmed Life', 'Third Eye Blind', 'Third Eye Blind'),
+  new Song ('Fly', 'Sugar Ray', 'Floored'),
+)
 //Texas
-questionNumber2.push(new Song ('Rest of My Life', 'Parker McCollum', 'Rest of My Life', 2));
-questionNumber2.push(new Song ('No Vacancy', 'Treaty Oak Revival', 'No Vacancy', 2));
-questionNumber2.push(new Song ('Ride the Lightning', 'Warren Zeiders', 'Ride the Lightning', 2));
-questionNumber2.push(new Song ('Teasure', 'Laci Kaye Booth', 'Laci Kaye Booth', 2));
+questionNumber2[1].push(
+  new Song ('Rest of My Life', 'Parker McCollum', 'Rest of My Life'),
+  new Song ('No Vacancy', 'Treaty Oak Revival', 'No Vacancy'),
+  new Song ('Ride the Lightning', 'Warren Zeiders', 'Ride the Lightning'),
+  new Song ('Teasure', 'Laci Kaye Booth', 'Laci Kaye Booth'),
+)
 //Illinois
-questionNumber2.push(new Song ('Hell in a Handbag', 'Alyssa Micaela', 'Hell in a Handbag', 3));
-questionNumber2.push(new Song ('Swervo', 'G Herbo, Southside', 'Swervo', 3));
-questionNumber2.push(new Song ('All Night Longer', 'Sammy Adams', 'All Night Longer', 3));
-questionNumber2.push(new Song ('Sorority Girl', 'Luke Brian', 'Spring Break... Here to Party', 3));
-questionNumber2.push(new Song ('Doeses and Mimosas', 'Cherub', 'Year of the Caprese', 3));
+questionNumber2[2].push(
+  new Song ('Hell in a Handbag', 'Alyssa Micaela', 'Hell in a Handbag'),
+  new Song ('Swervo', 'G Herbo, Southside', 'Swervo'),
+  new Song ('All Night Longer', 'Sammy Adams', 'All Night Longer'),
+  new Song ('Sorority Girl', 'Luke Brian', 'Spring Break... Here to Party'),
+  new Song ('Doeses and Mimosas', 'Cherub', 'Year of the Caprese'),
+)
 //New York
-questionNumber2.push(new Song ('Dead Presidents II', 'JAY-Z', 'Reasonable Doubt', 4));
-questionNumber2.push(new Song ('I Need a Girl Part II', 'Diddy', ' The Saga Continues', 4));
-questionNumber2.push(new Song ('Big Poppa', 'The Notorious B.I.G.', 'Ready to Die', 4));
-questionNumber2.push(new Song ('So Far Away', 'Carole King', 'In Concer', 4));
-questionNumber2.push(new Song ('If I Ain\'t Got You', 'Alicia Keys', 'The Diary of Alicia Keys', 4));
+questionNumber2[3].push(
+  new Song ('Dead Presidents II', 'JAY-Z', 'Reasonable Doubt',),
+  new Song ('I Need a Girl Part II', 'Diddy', ' The Saga Continues',),
+  new Song ('Big Poppa', 'The Notorious B.I.G.', 'Ready to Die',),
+  new Song ('So Far Away', 'Carole King', 'In Concer',),
+  new Song ('If I Ain\'t Got You', 'Alicia Keys', 'The Diary of Alicia Keys',),
+)
 
 // question 3
 //60's music
-questionNumber3.push(new Song ('I Say A Little Prayer You', 'Aretha Franklin', 'Aretha Now', 1));
-questionNumber3.push(new Song ('Creedence Clearwater Revival', 'Born on the Bayou', 'Live in Europe', 1));
-questionNumber3.push(new Song ('My Girl', 'The Temptations', 'The Temptations Sing Smokey', 1));
-questionNumber3.push(new Song ('What\’s New Pussycat?', 'Tom Jones', 'What\’s New Pussycat?',  1));
-questionNumber3.push(new Song ('My Cherie Amour', 'Stevie Wonder', 'My Cherie Amour',  1));
+questionNumber3[0].push(
+  new Song ('I Say A Little Prayer You', 'Aretha Franklin', 'Aretha Now'),
+  new Song ('Creedence Clearwater Revival', 'Born on the Bayou', 'Live in Europe'),
+  new Song ('My Girl', 'The Temptations', 'The Temptations Sing Smokey'),
+  new Song ('What\’s New Pussycat?', 'Tom Jones', 'What\’s New Pussycat?'),
+  new Song ('My Cherie Amour', 'Stevie Wonder', 'My Cherie Amour'),
+)
 //70's music
-questionNumber3.push(new Song ('Dreams', 'Fleetwood Mac', 'Rumours', 2));
-questionNumber3.push(new Song ('Sweet Emotion', 'Aerosmith', 'Toys in The Attic', 2));
-questionNumber3.push(new Song ('Changes', 'David Bowie', 'Hunky Dory', 2));
-questionNumber3.push(new Song ('What You Won’t Do For Love', 'Bobby Caldwell', 'Bobby Caldwell', 2));
-questionNumber3.push(new Song ('Let’s Get It On', 'Marvin Gaye', 'Let\’s Get It On', 2));
+questionNumber3[1].push(
+  new Song ('Dreams', 'Fleetwood Mac', 'Rumours'),
+  new Song ('Sweet Emotion', 'Aerosmith', 'Toys in The Attic'),
+  new Song ('Changes', 'David Bowie', 'Hunky Dory'),
+  new Song ('What You Won’t Do For Love', 'Bobby Caldwell', 'Bobby Caldwell'),
+  new Song ('Let’s Get It On', 'Marvin Gaye', 'Let\’s Get It On'),
+)
 //80's music
-questionNumber3.push(new Song ('Celebration', 'Kool & The Gang', 'Celebrate!', 3));
-questionNumber3.push(new Song ('Could You Be Loved', 'Bob Marley & The Wailers', 'Uprising', 3));
-questionNumber3.push(new Song ('Whip It', 'Devo', 'Freedom Of Choice', 3));
-questionNumber3.push(new Song ('Never Too Much', 'Luther Vandross', 'Never Too Much', 3));
-questionNumber3.push(new Song ('Waiting For A Girl Like You', 'Foreigner', '4', 3));
+questionNumber3[2].push(
+  new Song ('Celebration', 'Kool & The Gang', 'Celebrate!'),
+  new Song ('Could You Be Loved', 'Bob Marley & The Wailers', 'Uprising'),
+  new Song ('Whip It', 'Devo', 'Freedom Of Choice'),
+  new Song ('Never Too Much', 'Luther Vandross', 'Never Too Much'),
+  new Song ('Waiting For A Girl Like You', 'Foreigner', '4'),
+)
 //90's music
-questionNumber3.push(new Song ('Wannabe', 'Spice Girls', 'Spice', 4));
-questionNumber3.push(new Song ('Wonderwall', 'Oasis', 'What\’s the Story Morning Glory?', 4));
-questionNumber3.push(new Song ('Man in The Box', 'Alice in Chains', 'Facelift',4));
-questionNumber3.push(new Song ('Creep', 'TLC', 'Ooooooohhh… On the TLC Tip', 4));
-questionNumber3.push(new Song ('California Love', 'Tupac Shakur', 'All Eyes on Me', 4));
+questionNumber3[3].push(
+  new Song ('Wannabe', 'Spice Girls', 'Spice',),
+  new Song ('Wonderwall', 'Oasis', 'What\’s the Story Morning Glory?',),
+  new Song ('Man in The Box', 'Alice in Chains', 'Facelift'),
+  new Song ('Creep', 'TLC', 'Ooooooohhh… On the TLC Tip',),
+  new Song ('California Love', 'Tupac Shakur', 'All Eyes on Me',),
+)
 //00's music
-questionNumber3.push(new Song ('In Da Club', '50 Cent', 'Get Rich or Die Tryin’',5));
-questionNumber3.push(new Song ('Party Up', 'DMX', '… And Then There Was X', 5));
-questionNumber3.push(new Song ('She Will Be Loved', 'Maroon 5', 'Songs About Jane', 5));
-questionNumber3.push(new Song ('Sugar, We’re Going Down', 'Fall Out Boy', 'From Under the Cork Tree', 5));
-questionNumber3.push(new Song ('Hott in Herre', 'Nelly', 'Nellyville', 5));
-
+questionNumber3[4].push(
+  new Song ('In Da Club', '50 Cent', 'Get Rich or Die Tryin’',),
+  new Song ('Party Up', 'DMX', '… And Then There Was X', ),
+  new Song ('She Will Be Loved', 'Maroon 5', 'Songs About Jane', ),
+  new Song ('Sugar, We’re Going Down', 'Fall Out Boy', 'From Under the Cork Tree', ),
+  new Song ('Hott in Herre', 'Nelly', 'Nellyville', ),
+)
 // question 4
 //Fall/Winter
-questionNumber4.push(new Song ('If I Could Fly', 'One Direction', 'Made in the A.M.', 1));
-questionNumber4.push(new Song ('September', 'Earth, Wind & Fire', 'The Best of Earth, Wind & Fire, Vol. 1', 1));
-questionNumber4.push(new Song ('Only Exception', 'Paramore', 'Brand New Eyes', 1));
-questionNumber4.push(new Song ('Maps', 'Yeah Yeah Yeahs', 'Fever to Tell', 1));
-questionNumber4.push(new Song ('Ho Hey', 'Lumineers', 'The Lumineers', 1));
+  new Song ('If I Could Fly', 'One Direction', 'Made in the A.M.', 1);
+  new Song ('September', 'Earth, Wind & Fire', 'The Best of Earth, Wind & Fire, Vol. 1', 1);
+  new Song ('Only Exception', 'Paramore', 'Brand New Eyes', 1);
+  new Song ('Maps', 'Yeah Yeah Yeahs', 'Fever to Tell', 1);
+  new Song ('Ho Hey', 'Lumineers', 'The Lumineers', 1);
 //Spring
-questionNumber4.push(new Song ('Hey There Delilah', 'Plain White T\’s', 'All That We Needed and Every Second Counts', 2));
-questionNumber4.push(new Song ('OTW', 'Khalid', 'OTW', 2));
-questionNumber4.push(new Song ('What Do You Mean', 'Justin Bieber', 'Purpose', 2));
-questionNumber4.push(new Song ('Infinity Guitars', 'Sleigh Bells', 'Treats', 2));
-questionNumber4.push(new Song ('Closer', 'The Chainsmokers, Halsey', 'Collage', 2)) ;
+  new Song ('Hey There Delilah', 'Plain White T\’s', 'All That We Needed and Every Second Counts', 2);
+  new Song ('OTW', 'Khalid', 'OTW', 2);
+  new Song ('What Do You Mean', 'Justin Bieber', 'Purpose', 2);
+  new Song ('Infinity Guitars', 'Sleigh Bells', 'Treats', 2);
+  new Song ('Closer', 'The Chainsmokers, Halsey', 'Collage', 2) ;
 //Summer
-questionNumber4.push(new Song ('Shape Of You', 'Ed Sheeran', '+', 3));
-questionNumber4.push(new Song ('This is What You Came For', 'Calvin Harris', 'This is What You Came For', 3));
-questionNumber4.push(new Song ('Zanzibar', 'Kamaliza', 'Zanzibar', 3));
-questionNumber4.push(new Song ('Essence', 'WizKid', 'Made in Lagos', 3));
-questionNumber4.push(new Song ('BeatBox', 'SpotemGottem', 'Beat Box', 3));
+  new Song ('Shape Of You', 'Ed Sheeran', '+', 3);
+  new Song ('This is What You Came For', 'Calvin Harris', 'This is What You Came For', 3);
+  new Song ('Zanzibar', 'Kamaliza', 'Zanzibar', 3);
+  new Song ('Essence', 'WizKid', 'Made in Lagos', 3);
+  new Song ('BeatBox', 'SpotemGottem', 'Beat Box', 3);
 //
 
 // question 5
 //Facebook
-questionNumber5.push(new Song ('STAY', 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU',1));
-questionNumber5.push(new Song ('Low', 'Flo Rida & T-Pain', 'Mail on Sunday', 1));
-questionNumber5.push(new Song ('Because You Move Me', 'Tinlicker & Helsloot', 'Because You Move ', 1));
-questionNumber5.push(new Song ('One Dance', 'Drake', 'single', 1 ));
-questionNumber5.push(new Song ('Bad Guy','Billie Eilish', 'When We All Fall Asleep, Where Do We Go', 1));
+  new Song ('STAY', 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU',1);
+  new Song ('Low', 'Flo Rida & T-Pain', 'Mail on Sunday', 1);
+  new Song ('Because You Move Me', 'Tinlicker & Helsloot', 'Because You Move ', 1);
+  new Song ('One Dance', 'Drake', 'single', 1 );
+  new Song ('Bad Guy','Billie Eilish', 'When We All Fall Asleep, Where Do We Go', 1);
 //Instagram
-questionNumber5.push(new Song ('Butter', 'BTS','n/a', 2));
-questionNumber5.push(new Song ('Stronger', 'Kanye West','Graduation', 2));
-questionNumber5.push(new Song ('Crazy In Love', 'Beyonce & Jay-Z','Dangerously In LoveDrake', 2));
-questionNumber5.push(new Song ('Wants and Needs','Drake & Lil Baby','Scary Hours 2', 2));
-questionNumber5.push(new Song ('Fireworks','ATEEZ','ZERO: FEVER Part.2Fac', 2));
+  new Song ('Butter', 'BTS','n/a', 2);
+  new Song ('Stronger', 'Kanye West','Graduation', 2);
+  new Song ('Crazy In Love', 'Beyonce & Jay-Z','Dangerously In LoveDrake', 2);
+  new Song ('Wants and Needs','Drake & Lil Baby','Scary Hours 2', 2);
+  new Song ('Fireworks','ATEEZ','ZERO: FEVER Part.2Fac', 2);
 //Twitter
-questionNumber5.push(new Song ('Jail','Kanye West','Donda', 3));
-questionNumber5.push(new Song ('INDUSTRY BABY','Lil Nax X & Jack Harlow','INDUSTRY BABY & Jack Harlows', 3));
-questionNumber5.push(new Song ('Bad Habits','Ed Sheeran','Bad Habits', 3));
-questionNumber5.push(new Song ('Pepas','Farruko','Pepas', 3));
-questionNumber5.push(new Song ('good 4 u','Olivia Rodrigo','SOUR', 3));
+  new Song ('Jail','Kanye West','Donda', 3);
+  new Song ('INDUSTRY BABY','Lil Nax X & Jack Harlow','INDUSTRY BABY & Jack Harlows', 3);
+  new Song ('Bad Habits','Ed Sheeran','Bad Habits', 3);
+  new Song ('Pepas','Farruko','Pepas', 3);
+  new Song ('good 4 u','Olivia Rodrigo','SOUR', 3);
 //Myspace
-questionNumber5.push(new Song ('Bring It','Cobra Starship','While the City Sleeps, We Rule the Streets', 4));
-questionNumber5.push(new Song ('1985','bowling for Soup','A Hangover You Don\'t Deserve', 4));
-questionNumber5.push(new Song ('One Week','Barenaked Ladies','Stunt', 4));
-questionNumber5.push(new Song ('Misery Business','Paramore','Riot', 4));
-questionNumber5.push(new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t You Fake It', 4));
+  new Song ('Bring It','Cobra Starship','While the City Sleeps, We Rule the Streets', 4);
+  new Song ('1985','bowling for Soup','A Hangover You Don\'t Deserve', 4);
+  new Song ('One Week','Barenaked Ladies','Stunt', 4);
+  new Song ('Misery Business','Paramore','Riot', 4);
+  new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t You Fake It', 4);
 
 
 // question 6
