@@ -11,13 +11,16 @@ const questionNumber2 = [];
 const questionNumber3 = [];
 const questionNumber4 = [];
 const questionNumber5 = [];
-const questionNumber6 = [];
+const questionNumber6 = [[], [], [], [], [], [], [], [], [], [],];
 
 // final playlist recommendation
 let recommendedPlayList = [];
 
 // question element in html
 const questionElem = document.getElementById('question')
+const ulQuestionElem = document.getElementById('question_ul')
+
+let questionSixSong = null;
 
 // __________________________________ Constructor Functions  __________________________________ 
 
@@ -38,6 +41,13 @@ function Song(name, artist, album, id) {
 // __________________________________ Prototype Methods __________________________________ 
 
 // __________________________________ Global Functions __________________________________ 
+
+// random item from array
+function randomArrayItem(arra) {
+  let index = Math.floor((Math.random() * arra.length));
+  return arra[index];
+}
+
 
 // make an html elem, can insert text and/or attribute
 function _makeElem(tag, parent, text=null, attribute=null, attributeValue=null) {
@@ -68,10 +78,58 @@ function generatePlaylist() {
 //   recommendedPlayList.push(song);
 // }
 
+// return a random song from the applicable array based on user click
+function q6HandleClick() {
+
+  switch(event.target.id) {
+    case 'titanic':
+      questionSixSong = randomArrayItem(questionNumber6[0])
+      console.log(questionSixSong)
+      break;
+    case 'interstellar':
+      questionSixSong = randomArrayItem(questionNumber6[1]);
+      console.log(questionSixSong);
+      break;
+    case 'grease':
+      questionSixSong = randomArrayItem(questionNumber6[2]);
+      console.log(questionSixSong);
+      break;
+    case '8_mile':
+      questionSixSong = randomArrayItem(questionNumber6[3]);
+      console.log(questionSixSong);
+      break;
+    case 'tarzan':
+      questionSixSong = randomArrayItem(questionNumber6[4]);
+      console.log(questionSixSong);
+      break;
+    case 'school':
+      questionSixSong = randomArrayItem(questionNumber6[5]);
+      console.log(questionSixSong);
+      break;
+    case 'pulp_fiction':
+      questionSixSong = randomArrayItem(questionNumber6[6]);
+      console.log(questionSixSong);
+      break;
+    case 'guardians':
+      questionSixSong = randomArrayItem(questionNumber6[7]);
+      console.log(questionSixSong);
+      break;
+    case 'breakfast':
+      questionSixSong = randomArrayItem(questionNumber6[8]);
+      console.log(questionSixSong);
+      break;
+    case 'star':
+      questionSixSong = randomArrayItem(questionNumber6[9]);
+      console.log(questionSixSong);
+      break;      
+  }
+}
+
 // __________________________________ Event Listeners  __________________________________ 
 
-// __________________________________ Calls __________________________________ 
+ulQuestionElem.addEventListener('click', q6HandleClick)
 
+// __________________________________ Calls __________________________________ 
 
 // question 1
 //Roadtrip
@@ -203,32 +261,66 @@ questionNumber5.push(new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t Y
 
 
 // question 6
-//Titanic
-questionNumber6.push(new Song ('my heart will go on', 'celine dion', 'titanic', 1));
-//Interstellar
-questionNumber6.push(new Song ('cornfield chase’, ‘hans zimmer’, ‘interstellar', 2));
-questionNumber6.push(new Song ('no time for caution', 'hans zimmer', 'interstellar', 2));
-//Grease
-questionNumber6.push(new Song ("you’re the one that I want", 'john travolta, olivia newton-john', 'grease', 3));
-questionNumber6.push(new Song ("hopelessly devoted to you", "john travolta, olivia newton-john", "grease", 3));
-//8 mile
-questionNumber6.push(new Song ('lose yourself', 'eminem', '8 mile', 4));
-questionNumber6.push(new Song ("8 mile", "eminem", "8 mile", 4));
-//Tarzan
-questionNumber6.push(new Song ("you’ll be in my heart", 'phil collins', 'tarzan', 5));
-questionNumber6.push(new Song ("two worlds", "phil collins", "tarzan", 5));
-//School of Rock
-questionNumber6.push(new Song ('edge of seventeen', 'stevie nicks', 'school of rock', 6));
-questionNumber6.push(new Song ("iron man", "black sabbath", "school of rock", 6));
-//Pulp Fiction
-questionNumber6.push(new Song ('dancing queen', 'abba', 'pulp fiction', 7));
-questionNumber6.push(new Song ("satisfied mind", "johnny cash", "pulp fiction", 7));
-//Gaurdians of the Galaxy
-questionNumber6.push(new Song ('mr. blue sky', 'electric light orchestra', 'guardians of the galaxy', 8));
-questionNumber6.push(new Song ("lake shore drive", "aliotta haynes jeremiah", "guardians of the galaxy", 8));
-//The Breakfast Club
-questionNumber6.push(new Song ("don’t you (forget about me)", 'simple minds', 'the breakfast club', 9));
-//A star is Born
-questionNumber6.push(new Song ('shallow', 'lady gaga, bradley cooper', 'a star is born', 10));
-questionNumber6.push(new Song ("always remember us this way", "lady gaga, bradley cooper", "a star is born", 10));
+questionNumber6[0].push(
+  new Song("my heart will go on", "celine dion", "titanic"),
+  new Song("hymn to the sea", "james hornes", "titanic"),
+  new Song("my heart will go on", "celine dion", "titanic"),
+);
 
+questionNumber6[1].push(
+  new Song("cornfield chase’, ‘hans zimmer’, ‘interstellar"),
+  new Song("no time for caution", "hans zimmer", "interstellar"),
+  new Song("S.T.A.Y.", "hans zimmer", "interstellar"),
+  new Song("mountains", "hans zimmer", "interstellar"),
+  new Song("dreaming of the crash", "hans zimmer", "interstellar")
+);
+
+questionNumber6[2].push(
+  new Song("you’re the one that I want", 'john travolta, olivia newton-john', 'grease'),
+  new Song("hopelessly devoted to you", "john travolta, olivia newton-john", "grease")
+);
+
+questionNumber6[3].push(
+  new Song("lose yourself", "eminem", "8 mile"),
+  new Song("8 mile", "eminem", "8 mile"),
+  new Song("rap game", "D12", "8 mile")
+);
+
+questionNumber6[4].push(
+  new Song("you’ll be in my heart", 'phil collins', 'tarzan'),
+  new Song("two worlds", "phil collins", "tarzan")
+);
+
+questionNumber6[5].push(
+  new Song('edge of seventeen', 'stevie nicks', 'school of rock'),
+  new Song("iron man", "black sabbath", "school of rock")
+);
+
+questionNumber6[6].push(
+  new Song("you never can tell", "chuck berry", "pulp fiction"),
+  new Song("dancing queen", "abba", "pulp fiction"),
+  new Song("satisfied mind", "johnny cash", "pulp fiction"),
+  new Song("you never can tell", "chuck berry", "pulp fiction")
+);
+
+questionNumber6[7].push(
+  new Song('mr. blue sky', 'electric light orchestra', 'guardians of the galaxy'),
+  new Song("lake shore drive", "aliotta haynes jeremiah", "guardians of the galaxy"),
+  new Song("the chain", "fleetwood mac", "guardians of the galaxy"),
+  new Song("fox on the run", "sweet", "guardians of the galaxy"),
+  new Song("cherry bomb", "the runaways", "guardians of the galaxy"),
+  new Song("ain't no mountain high enough", "marvin gaye, tammi terrel", "guardians of the galaxy"),
+);
+
+questionNumber6[8].push(
+  new Song("don’t you (forget about me)", 'simple minds', 'the breakfast club'),
+  new Song("we are not alone", 'karla devito', 'the breakfast club')
+);
+
+questionNumber6[9].push(
+  new Song('shallow', 'lady gaga, bradley cooper', 'a star is born'),
+  new Song("always remember us this way", "lady gaga, bradley cooper", "a star is born"),
+  new Song("black eyes", "bradley cooper", "a star is born"),
+  new Song("La Vie En Rose", "lady gaga", "a star is born"),
+  new Song('shallow', 'lady gaga, bradley cooper', 'a star is born'),
+);
