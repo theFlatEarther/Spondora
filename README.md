@@ -42,7 +42,7 @@ b.	Pictures
 i.	Facebook
 ii.	Myspace
 iii.	Tik tok
-iv.	Instagram/ or none of the above
+iv.	Instagram
 6.	Movie question 
 a.	Dropdown
 i.	Titanic
