@@ -9,8 +9,8 @@ console.log('Flat earth is real - Angela Dzodzomoney')
 const questionNumber1 = [];
 const questionNumber2 = [];
 const questionNumber3 = [];
-const questionNumber4 = [];
-const questionNumber5 = [];
+const questionNumber4 = [[], [], [],];
+const questionNumber5 = [[], [], [], [],];
 const questionNumber6 = [[], [], [], [], [], [], [], [], [], [],];
 
 // final playlist recommendation
@@ -20,6 +20,8 @@ let recommendedPlayList = [];
 const questionElem = document.getElementById('question')
 const ulQuestionElem = document.getElementById('question_ul')
 
+let questionFourSong = null;
+let questionFiveSong = null;
 let questionSixSong = null;
 
 // __________________________________ Constructor Functions  __________________________________ 
@@ -79,6 +81,52 @@ function generatePlaylist() {
 // }
 
 // return a random song from the applicable array based on user click
+
+// question 4 handler
+
+function q4HandleClick() {
+  switch (event.target.id) {
+    case "winter":
+      questionFourSong = randomArrayItem(questionNumber4[0]);
+      console.log("added " + event.target.id);
+      break;
+    case "spring":
+      questionFourSong = randomArrayItem(questionNumber4[1]);
+      console.log("added " + event.target.id);
+      break;
+    case "summer":
+      questionFourSong = randomArrayItem(questionNumber4[2]);
+      console.log("added " + event.target.id);
+      break;
+  }
+}
+
+
+// question 5 handler
+function q5HandleClick() {
+  console.log(event.target.id)
+  switch(event.target.id) {
+    case 'myspace':
+      questionFiveSong = randomArrayItem(questionNumber5[0])
+      console.log('added '+ event.target.id);
+      break;
+    case 'facebook':
+      questionFiveSong = randomArrayItem(questionNumber5[1]);
+      console.log("added " + event.target.id);
+      break;
+    case 'insta':
+      questionFiveSong = randomArrayItem(questionNumber5[2]);
+      console.log("added " + event.target.id);
+      break;
+    case 'tiktok':
+      questionFiveSong = randomArrayItem(questionNumber5[3]);
+      console.log("added " + event.target.id);
+      break;
+    }
+    console.log(questionFiveSong)
+}
+
+// question 6 handler
 function q6HandleClick() {
 
   switch(event.target.id) {
@@ -127,7 +175,7 @@ function q6HandleClick() {
 
 // __________________________________ Event Listeners  __________________________________ 
 
-ulQuestionElem.addEventListener('click', q6HandleClick)
+
 
 // __________________________________ Calls __________________________________ 
 
@@ -214,50 +262,68 @@ questionNumber3.push(new Song ('Hott in Herre', 'Nelly', 'Nellyville', 5));
 
 // question 4
 //Fall/Winter
-questionNumber4.push(new Song ('If I Could Fly', 'One Direction', 'Made in the A.M.', 1));
-questionNumber4.push(new Song ('September', 'Earth, Wind & Fire', 'The Best of Earth, Wind & Fire, Vol. 1', 1));
-questionNumber4.push(new Song ('Only Exception', 'Paramore', 'Brand New Eyes', 1));
-questionNumber4.push(new Song ('Maps', 'Yeah Yeah Yeahs', 'Fever to Tell', 1));
-questionNumber4.push(new Song ('Ho Hey', 'Lumineers', 'The Lumineers', 1));
+questionNumber4[0].push(
+  new Song ('If I Could Fly', 'One Direction', 'Made in the A.M.', 1),
+  new Song ('September', 'Earth, Wind & Fire', 'The Best of Earth, Wind & Fire, Vol. 1', 1),
+  new Song ('Only Exception', 'Paramore', 'Brand New Eyes', 1),
+  new Song ('Maps', 'Yeah Yeah Yeahs', 'Fever to Tell', 1),
+  new Song ('Ho Hey', 'Lumineers', 'The Lumineers', 1),
+);
 //Spring
-questionNumber4.push(new Song ('Hey There Delilah', 'Plain White T\’s', 'All That We Needed and Every Second Counts', 2));
-questionNumber4.push(new Song ('OTW', 'Khalid', 'OTW', 2));
-questionNumber4.push(new Song ('What Do You Mean', 'Justin Bieber', 'Purpose', 2));
-questionNumber4.push(new Song ('Infinity Guitars', 'Sleigh Bells', 'Treats', 2));
-questionNumber4.push(new Song ('Closer', 'The Chainsmokers, Halsey', 'Collage', 2)) ;
+questionNumber4[1].push(
+  new Song ('Hey There Delilah', 'Plain White T\’s', 'All That We Needed and Every Second Counts', 2),
+  new Song ('OTW', 'Khalid', 'OTW', 2),
+  new Song ('What Do You Mean', 'Justin Bieber', 'Purpose', 2),
+  new Song ('Infinity Guitars', 'Sleigh Bells', 'Treats', 2),
+  new Song ('Closer', 'The Chainsmokers, Halsey', 'Collage', 2),
+);
 //Summer
-questionNumber4.push(new Song ('Shape Of You', 'Ed Sheeran', '+', 3));
-questionNumber4.push(new Song ('This is What You Came For', 'Calvin Harris', 'This is What You Came For', 3));
-questionNumber4.push(new Song ('Zanzibar', 'Kamaliza', 'Zanzibar', 3));
-questionNumber4.push(new Song ('Essence', 'WizKid', 'Made in Lagos', 3));
-questionNumber4.push(new Song ('BeatBox', 'SpotemGottem', 'Beat Box', 3));
+questionNumber4[2].push(
+  new Song ('Shape Of You', 'Ed Sheeran', '+', 3),
+  new Song ('This is What You Came For', 'Calvin Harris', 'This is What You Came For', 3),
+  new Song ('Zanzibar', 'Kamaliza', 'Zanzibar', 3),
+  new Song ('Essence', 'WizKid', 'Made in Lagos', 3),
+  new Song ('BeatBox', 'SpotemGottem', 'Beat Box', 3),
+);
+
 //
 
 // question 5
 //Facebook
-questionNumber5.push(new Song ('STAY', 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU',1));
-questionNumber5.push(new Song ('Low', 'Flo Rida & T-Pain', 'Mail on Sunday', 1));
-questionNumber5.push(new Song ('Because You Move Me', 'Tinlicker & Helsloot', 'Because You Move ', 1));
-questionNumber5.push(new Song ('One Dance', 'Drake', 'single', 1 ));
-questionNumber5.push(new Song ('Bad Guy','Billie Eilish', 'When We All Fall Asleep, Where Do We Go', 1));
+questionNumber5[0].push(
+  new Song ('STAY', 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU',1),
+  new Song ('Low', 'Flo Rida & T-Pain', 'Mail on Sunday', 1),
+  new Song ('Because You Move Me', 'Tinlicker & Helsloot', 'Because You Move ', 1),
+  new Song ('One Dance', 'Drake', 'single', 1 ),
+  new Song ('Bad Guy','Billie Eilish', 'When We All Fall Asleep, Where Do We Go', 1),
+);
+
 //Instagram
-questionNumber5.push(new Song ('Butter', 'BTS','n/a', 2));
-questionNumber5.push(new Song ('Stronger', 'Kanye West','Graduation', 2));
-questionNumber5.push(new Song ('Crazy In Love', 'Beyonce & Jay-Z','Dangerously In LoveDrake', 2));
-questionNumber5.push(new Song ('Wants and Needs','Drake & Lil Baby','Scary Hours 2', 2));
-questionNumber5.push(new Song ('Fireworks','ATEEZ','ZERO: FEVER Part.2Fac', 2));
+questionNumber5[1].push(
+  new Song ('Butter', 'BTS','n/a', 2),
+  new Song ('Stronger', 'Kanye West','Graduation', 2),
+  new Song ('Crazy In Love', 'Beyonce & Jay-Z','Dangerously In LoveDrake', 2),
+  new Song ('Wants and Needs','Drake & Lil Baby','Scary Hours 2', 2),
+  new Song ('Fireworks','ATEEZ','ZERO: FEVER Part.2Fac', 2),
+);
+
 //Twitter
-questionNumber5.push(new Song ('Jail','Kanye West','Donda', 3));
-questionNumber5.push(new Song ('INDUSTRY BABY','Lil Nax X & Jack Harlow','INDUSTRY BABY & Jack Harlows', 3));
-questionNumber5.push(new Song ('Bad Habits','Ed Sheeran','Bad Habits', 3));
-questionNumber5.push(new Song ('Pepas','Farruko','Pepas', 3));
-questionNumber5.push(new Song ('good 4 u','Olivia Rodrigo','SOUR', 3));
+questionNumber5[2].push(
+  new Song ('Jail','Kanye West','Donda', 3),
+  new Song ('INDUSTRY BABY','Lil Nax X & Jack Harlow','INDUSTRY BABY & Jack Harlows', 3),
+  new Song ('Bad Habits','Ed Sheeran','Bad Habits', 3),
+  new Song ('Pepas','Farruko','Pepas', 3),
+  new Song ('good 4 u','Olivia Rodrigo','SOUR', 3),
+);
+
 //Myspace
-questionNumber5.push(new Song ('Bring It','Cobra Starship','While the City Sleeps, We Rule the Streets', 4));
-questionNumber5.push(new Song ('1985','bowling for Soup','A Hangover You Don\'t Deserve', 4));
-questionNumber5.push(new Song ('One Week','Barenaked Ladies','Stunt', 4));
-questionNumber5.push(new Song ('Misery Business','Paramore','Riot', 4));
-questionNumber5.push(new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t You Fake It', 4));
+questionNumber5[3].push(
+  new Song ('Bring It','Cobra Starship','While the City Sleeps, We Rule the Streets', 4),
+  new Song ('1985','bowling for Soup','A Hangover You Don\'t Deserve', 4),
+  new Song ('One Week','Barenaked Ladies','Stunt', 4),
+  new Song ('Misery Business','Paramore','Riot', 4),
+  new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t You Fake It', 4),
+);
 
 
 // question 6
