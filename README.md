@@ -15,24 +15,24 @@ Project Description: Music Recommendation Application
 a.	Picture
 i.	Road trip
 ii.	Camping
-iii.	Studying
+iii. Studying
 iv.	party
 2.	State question
 a.	Dropdown
 i.	California
 ii.	Texas
-iii.	Illinois
+iii. Illinois
 iv.	New York
 3.	seasons question
 a.	picture
 i.	spring
 ii.	summer
-iii.	fall winter
+iii. fall winter
 4.	What decade do you want to experience?
 a.	Dropdown
 i.	60
 ii.	70
-iii.	80
+iii. 80
 iv.	90
 v.	00
 b.	pictures
