@@ -72,63 +72,50 @@ function addSongToPlayList(song) {
   recommendedPlayList.push(song);
 }
 
+// return a random song from the applicable array based on user click
 function q6HandleClick() {
 
   switch(event.target.id) {
     case 'titanic':
       questionSixSong = randomArrayItem(questionNumber6[0])
-      console.log('added titanic to array')
       console.log(questionSixSong)
       break;
     case 'interstellar':
       questionSixSong = randomArrayItem(questionNumber6[1]);
       console.log(questionSixSong);
-      console.log('add interstellar')
       break;
     case 'grease':
       questionSixSong = randomArrayItem(questionNumber6[2]);
       console.log(questionSixSong);
-      console.log('grease')
       break;
     case '8_mile':
       questionSixSong = randomArrayItem(questionNumber6[3]);
       console.log(questionSixSong);
-      console.log('add 8')
       break;
     case 'tarzan':
       questionSixSong = randomArrayItem(questionNumber6[4]);
       console.log(questionSixSong);
-      console.log('add tarzan')
       break;
     case 'school':
       questionSixSong = randomArrayItem(questionNumber6[5]);
       console.log(questionSixSong);
-      console.log('add school')
       break;
     case 'pulp_fiction':
       questionSixSong = randomArrayItem(questionNumber6[6]);
       console.log(questionSixSong);
-      console.log('TARANTINO')  
       break;
     case 'guardians':
       questionSixSong = randomArrayItem(questionNumber6[7]);
       console.log(questionSixSong);
-      console.log('G OT G')
       break;
     case 'breakfast':
       questionSixSong = randomArrayItem(questionNumber6[8]);
       console.log(questionSixSong);
-      console.log('b club')
       break;
     case 'star':
       questionSixSong = randomArrayItem(questionNumber6[9]);
       console.log(questionSixSong);
-      console.log('lady gaga')
       break;      
-      
-    
-
-
   }
 }
 
