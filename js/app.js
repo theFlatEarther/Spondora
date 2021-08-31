@@ -31,6 +31,8 @@ let questionFourSong = null;
 let questionFiveSong = null;
 let questionSixSong = null;
 
+let currentSong = null;
+
 // __________________________________ Constructor Functions  __________________________________ 
 
 // create a song object, accept name, artist, album, and optional img artwork
@@ -92,20 +94,20 @@ function q1HandleClick() {
 
   switch(event.target.id){
     case 'q1a1':
-      questionOneSong = randomArrayItem(questionNumber1[0]);
-      console.log(questionOneSong)
+      currentSong = randomArrayItem(questionNumber1[0]);
+      console.log(currentSong)
       break;
     case 'q1a2':
-      questionOneSong = randomArrayItem(questionNumber1[1]);
-      console.log(questionOneSong)
+      currentSong = randomArrayItem(questionNumber1[1]);
+      console.log(currentSong)
       break;
     case 'q1a3':
-      questionOneSong = randomArrayItem(questionNumber1[2]);
-      console.log(questionOneSong)
+      currentSong = randomArrayItem(questionNumber1[2]);
+      console.log(currentSong)
       break;
     case 'q1a4':
-      questionOneSong = randomArrayItem(questionNumber1[3]);
-      console.log(questionOneSong)
+      currentSong = randomArrayItem(questionNumber1[3]);
+      console.log(currentSong)
       break;
   }
 }
@@ -113,20 +115,20 @@ function q2HandleClick() {
   
   switch(event.target.id){
     case 'q2a1':
-      questionTwoSong = randomArrayItem(questionNumber2[0]);
-      console.log(questionTwoSong)
+      currentSong = randomArrayItem(questionNumber2[0]);
+      console.log(currentSong)
       break;
     case 'q2a2':
-      questionTwoSong = randomArrayItem(questionNumber2[1])
-      console.log(questionTwoSong)
+      currentSong = randomArrayItem(questionNumber2[1])
+      console.log(currentSong)
       break;
     case 'q2a3':
-      questionTwoSong = randomArrayItem(questionNumber2[2])
-      console.log(questionTwoSong)
+      currentSong = randomArrayItem(questionNumber2[2])
+      console.log(currentSong)
       break;
     case 'q2a4':
-      questionTwoSong = randomArrayItem(questionNumber2[3])
-      console.log(questionTwoSong)
+      currentSong = randomArrayItem(questionNumber2[3])
+      console.log(currentSong)
       break;
   }
 }
@@ -134,24 +136,24 @@ function q3HandleClick() {
   
   switch(event.target.id){
     case 'q3a1':
-      questionThreeSong = randomArrayItem(questionNumber3[0])
-      console.log(questionThreeSong)
+      currentSong = randomArrayItem(questionNumber3[0])
+      console.log(currentSong)
       break;
     case 'q3a2':
-      questionThreeSong = randomArrayItem(questionNumber3[1])
-      console.log(questionThreeSong)
+      currentSong = randomArrayItem(questionNumber3[1])
+      console.log(currentSong)
       break;
     case 'q3a3':
-      questionThreeSong = randomArrayItem(questionNumber3[2])
-      console.log(questionThreeSong)
+      currentSong = randomArrayItem(questionNumber3[2])
+      console.log(currentSong)
       break;
     case 'q3a4':
-      questionThreeSong = randomArrayItem(questionNumber3[3])
-      console.log(questionThreeSong)
+      currentSong = randomArrayItem(questionNumber3[3])
+      console.log(currentSong)
       break;
     case 'q3a5':
-      questionThreeSong = randomArrayItem(questionNumber3[3])
-      console.log(questionThreeSong)
+      currentSong = randomArrayItem(questionNumber3[3])
+      console.log(currentSong)
       break;
   }
 }
@@ -161,15 +163,15 @@ function q3HandleClick() {
 function q4HandleClick() {
   switch (event.target.id) {
     case "winter":
-      questionFourSong = randomArrayItem(questionNumber4[0]);
+      currentSong = randomArrayItem(questionNumber4[0]);
       console.log("added " + event.target.id);
       break;
     case "spring":
-      questionFourSong = randomArrayItem(questionNumber4[1]);
+      currentSong = randomArrayItem(questionNumber4[1]);
       console.log("added " + event.target.id);
       break;
     case "summer":
-      questionFourSong = randomArrayItem(questionNumber4[2]);
+      currentSong = randomArrayItem(questionNumber4[2]);
       console.log("added " + event.target.id);
       break;
   }
@@ -181,96 +183,108 @@ function q5HandleClick() {
   console.log(event.target.id)
   switch(event.target.id) {
     case 'myspace':
-      questionFiveSong = randomArrayItem(questionNumber5[0])
+      currentSong = randomArrayItem(questionNumber5[0])
       console.log('added '+ event.target.id);
       break;
     case 'facebook':
-      questionFiveSong = randomArrayItem(questionNumber5[1]);
+      currentSong = randomArrayItem(questionNumber5[1]);
       console.log("added " + event.target.id);
       break;
     case 'insta':
-      questionFiveSong = randomArrayItem(questionNumber5[2]);
+      currentSong = randomArrayItem(questionNumber5[2]);
       console.log("added " + event.target.id);
       break;
     case 'tiktok':
-      questionFiveSong = randomArrayItem(questionNumber5[3]);
+      currentSong = randomArrayItem(questionNumber5[3]);
       console.log("added " + event.target.id);
       break;
     }
-    console.log(questionFiveSong)
+    console.log("current song is" + currentSong)
 }
 
 // question 6 handler
 function q6HandleClick() {
-
+  // debugger;
   switch(event.target.id) {
     case 'titanic':
-      questionSixSong = randomArrayItem(questionNumber6[0])
-      console.log(questionSixSong)
+      currentSong = randomArrayItem(questionNumber6[0])
+      console.log("case 1 current song is" + currentSong)
       break;
     case 'interstellar':
-      questionSixSong = randomArrayItem(questionNumber6[1]);
-      console.log(questionSixSong);
+      currentSong = randomArrayItem(questionNumber6[1]);
+      console.log("case 2 current song is" + currentSong);
       break;
     case 'grease':
-      questionSixSong = randomArrayItem(questionNumber6[2]);
-      console.log(questionSixSong);
+      currentSong = randomArrayItem(questionNumber6[2]);
+      console.log("case 3 current song is" + currentSong);
       break;
     case '8_mile':
-      questionSixSong = randomArrayItem(questionNumber6[3]);
-      console.log(questionSixSong);
+      currentSong = randomArrayItem(questionNumber6[3]);
+      console.log("case 4 current song is" + currentSong);
       break;
     case 'tarzan':
-      questionSixSong = randomArrayItem(questionNumber6[4]);
-      console.log(questionSixSong);
+      currentSong = randomArrayItem(questionNumber6[4]);
+      console.log("case 5 current song is" + currentSong);
       break;
     case 'school':
-      questionSixSong = randomArrayItem(questionNumber6[5]);
-      console.log(questionSixSong);
+      currentSong = randomArrayItem(questionNumber6[5]);
+      console.log("case 6 current song is" + currentSong);
       break;
     case 'pulp_fiction':
-      questionSixSong = randomArrayItem(questionNumber6[6]);
-      console.log(questionSixSong);
+      currentSong = randomArrayItem(questionNumber6[6]);
+      console.log("case 7 current song is" + currentSong);
       break;
     case 'guardians':
-      questionSixSong = randomArrayItem(questionNumber6[7]);
-      console.log(questionSixSong);
+      currentSong = randomArrayItem(questionNumber6[7]);
+      console.log("case 8 current song is" + currentSong);
       break;
     case 'breakfast':
-      questionSixSong = randomArrayItem(questionNumber6[8]);
-      console.log(questionSixSong);
+      currentSong = randomArrayItem(questionNumber6[8]);
+      console.log("case 9 current song is" + currentSong);
       break;
     case 'star':
-      questionSixSong = randomArrayItem(questionNumber6[9]);
-      console.log(questionSixSong);
+      currentSong = randomArrayItem(questionNumber6[9]);
+      console.log("case 10 current song is" + currentSong);
       break;      
   }
 }
 function handleSubmit(){
   // console.log('it works!')
-  recommendedPlayList.push(questionSixSong)
+  recommendedPlayList.push(currentSong)
   addToLocalStorage();
   // console.log(recommendedPlayList)
 }
 
-function addToLocalStorage(){
+function addToLocalStorage() {
   const jsonAllItemsArray = JSON.stringify(recommendedPlayList)
   localStorage.setItem('playlist', jsonAllItemsArray)
 }
 
-function getFromLocalStorage(){
-  const jsonAllItemsArray =localStorage.getItem('playlist')
-  console.log(jsonAllItemsArray)
+function getFromLocalStorage() {
+  const fromStorage = localStorage.getItem('playlist')
+  if (fromStorage) {
+    const normalizedArray = JSON.parse(fromStorage)
+    console.log( "normalized array is ")
+    console.log(normalizedArray)
+    for (let item of normalizedArray) {
+      let tempSong = new Song(item.name, item.artist, item.album)
+      recommendedPlayList.push(tempSong)
+      console.log('rec playlist is')
+      console.log(recommendedPlayList)
+    }
+  }
 }
 // __________________________________ Event Listeners  __________________________________ 
+
 buttonElem.addEventListener('click', handleSubmit)
 
+questionElem.addEventListener('click', q1HandleClick)
+questionElem.addEventListener('click', q2HandleClick)
+questionElem.addEventListener('click', q3HandleClick)
+questionElem.addEventListener('click', q4HandleClick)
 questionElem.addEventListener('click', q5HandleClick)
+questionElem.addEventListener("click", q6HandleClick);
 
-// ulQuestionElem.addEventListener('click', q1HandleClick)
-// ulQuestionElem.addEventListener('click', q2HandleClick)
-// ulQuestionElem.addEventListener('click', q3HandleClick)
-// ulQuestionElem.addEventListener('click', q6HandleClick)
 
 // __________________________________ Calls __________________________________ 
 
