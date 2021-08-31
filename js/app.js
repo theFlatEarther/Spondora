@@ -20,6 +20,7 @@ let recommendedPlayList = [];
 const questionElem = document.getElementById('question')
 const ulQuestionElem = document.getElementById('question_ul')
 
+let questionFourSong = null;
 let questionFiveSong = null;
 let questionSixSong = null;
 
@@ -81,6 +82,26 @@ function generatePlaylist() {
 
 // return a random song from the applicable array based on user click
 
+// question 4 handler
+
+function q4HandleClick() {
+  switch (event.target.id) {
+    case "winter":
+      questionFourSong = randomArrayItem(questionNumber4[0]);
+      console.log("added " + event.target.id);
+      break;
+    case "spring":
+      questionFourSong = randomArrayItem(questionNumber4[1]);
+      console.log("added " + event.target.id);
+      break;
+    case "summer":
+      questionFourSong = randomArrayItem(questionNumber4[2]);
+      console.log("added " + event.target.id);
+      break;
+  }
+}
+
+
 // question 5 handler
 function q5HandleClick() {
   console.log(event.target.id)
@@ -102,6 +123,7 @@ function q5HandleClick() {
       console.log("added " + event.target.id);
       break;
     }
+    console.log(questionFiveSong)
 }
 
 // question 6 handler
@@ -153,8 +175,7 @@ function q6HandleClick() {
 
 // __________________________________ Event Listeners  __________________________________ 
 
-// ulQuestionElem.addEventListener('click', q6HandleClick);
-questionElem.addEventListener('click', q5HandleClick);
+
 
 // __________________________________ Calls __________________________________ 
 
@@ -247,7 +268,7 @@ questionNumber4[0].push(
   new Song ('Only Exception', 'Paramore', 'Brand New Eyes', 1),
   new Song ('Maps', 'Yeah Yeah Yeahs', 'Fever to Tell', 1),
   new Song ('Ho Hey', 'Lumineers', 'The Lumineers', 1),
-)
+);
 //Spring
 questionNumber4[1].push(
   new Song ('Hey There Delilah', 'Plain White T\’s', 'All That We Needed and Every Second Counts', 2),
@@ -255,7 +276,7 @@ questionNumber4[1].push(
   new Song ('What Do You Mean', 'Justin Bieber', 'Purpose', 2),
   new Song ('Infinity Guitars', 'Sleigh Bells', 'Treats', 2),
   new Song ('Closer', 'The Chainsmokers, Halsey', 'Collage', 2),
-)
+);
 //Summer
 questionNumber4[2].push(
   new Song ('Shape Of You', 'Ed Sheeran', '+', 3),
@@ -263,7 +284,8 @@ questionNumber4[2].push(
   new Song ('Zanzibar', 'Kamaliza', 'Zanzibar', 3),
   new Song ('Essence', 'WizKid', 'Made in Lagos', 3),
   new Song ('BeatBox', 'SpotemGottem', 'Beat Box', 3),
-)
+);
+
 //
 
 // question 5
@@ -274,7 +296,7 @@ questionNumber5[0].push(
   new Song ('Because You Move Me', 'Tinlicker & Helsloot', 'Because You Move ', 1),
   new Song ('One Dance', 'Drake', 'single', 1 ),
   new Song ('Bad Guy','Billie Eilish', 'When We All Fall Asleep, Where Do We Go', 1),
-)
+);
 
 //Instagram
 questionNumber5[1].push(
@@ -283,7 +305,7 @@ questionNumber5[1].push(
   new Song ('Crazy In Love', 'Beyonce & Jay-Z','Dangerously In LoveDrake', 2),
   new Song ('Wants and Needs','Drake & Lil Baby','Scary Hours 2', 2),
   new Song ('Fireworks','ATEEZ','ZERO: FEVER Part.2Fac', 2),
-)
+);
 
 //Twitter
 questionNumber5[2].push(
@@ -292,7 +314,7 @@ questionNumber5[2].push(
   new Song ('Bad Habits','Ed Sheeran','Bad Habits', 3),
   new Song ('Pepas','Farruko','Pepas', 3),
   new Song ('good 4 u','Olivia Rodrigo','SOUR', 3),
-)
+);
 
 //Myspace
 questionNumber5[3].push(
@@ -301,7 +323,7 @@ questionNumber5[3].push(
   new Song ('One Week','Barenaked Ladies','Stunt', 4),
   new Song ('Misery Business','Paramore','Riot', 4),
   new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t You Fake It', 4),
-)
+);
 
 
 // question 6
