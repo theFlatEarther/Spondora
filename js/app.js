@@ -265,10 +265,12 @@ function getFromLocalStorage(){
 // __________________________________ Event Listeners  __________________________________ 
 buttonElem.addEventListener('click', handleSubmit)
 
-ulQuestionElem.addEventListener('click', q1HandleClick)
-ulQuestionElem.addEventListener('click', q2HandleClick)
-ulQuestionElem.addEventListener('click', q3HandleClick)
-ulQuestionElem.addEventListener('click', q6HandleClick)
+questionElem.addEventListener('click', q5HandleClick)
+
+// ulQuestionElem.addEventListener('click', q1HandleClick)
+// ulQuestionElem.addEventListener('click', q2HandleClick)
+// ulQuestionElem.addEventListener('click', q3HandleClick)
+// ulQuestionElem.addEventListener('click', q6HandleClick)
 
 // __________________________________ Calls __________________________________ 
 
