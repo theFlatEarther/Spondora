@@ -266,9 +266,16 @@ function getFromLocalStorage() {
     const normalizedArray = JSON.parse(fromStorage)
     console.log( "normalized array is ")
     console.log(normalizedArray)
+    for (let item of normalizedArray) {
+      let tempSong = new Song(item.name, item.artist, item.album)
+      recommendedPlayList.push(tempSong)
+      console.log('rec playlist is')
+      console.log(recommendedPlayList)
+    }
   }
 }
 // __________________________________ Event Listeners  __________________________________ 
+
 buttonElem.addEventListener('click', handleSubmit)
 
 questionElem.addEventListener('click', q1HandleClick)
@@ -278,10 +285,6 @@ questionElem.addEventListener('click', q4HandleClick)
 questionElem.addEventListener('click', q5HandleClick)
 questionElem.addEventListener("click", q6HandleClick);
 
-// ulQuestionElem.addEventListener('click', q1HandleClick)
-// ulQuestionElem.addEventListener('click', q2HandleClick)
-// ulQuestionElem.addEventListener('click', q3HandleClick)
-// ulQuestionElem.addEventListener('click', q6HandleClick)
 
 // __________________________________ Calls __________________________________ 
 
