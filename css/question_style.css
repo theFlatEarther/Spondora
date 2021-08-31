@@ -1,0 +1,77 @@
+body {
+  color: white;
+  font-family: sans-serif;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center; 
+  height: 100vh; 
+  background-color: #151b29;
+  background-image: url(https://images.unsplash.com/photo-1621246159024-e53b1d25fc1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80);
+}
+
+
+
+ul {
+  background-color: blueviolet;
+  display:flex;
+  align-items: right;
+  justify-content:flex-end;
+} 
+
+#navi {
+  padding:0px 10px 0px 10px ;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+a:hover {
+  border-color: #f1ff5c;
+  color:  #f1ff5c;
+  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+}
+
+#images {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+#question {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 750px;
+  width: 750px;
+  background-color: crimson;
+}
+
+
+button {
+  background: none;
+  color: #ffa260;
+  border: 2px solid;
+  padding: 1em 2em;
+  transition: all 0.2s;
+}
+
+button:hover {
+  border-color: #f1ff5c;
+  color:  #f1ff5c;
+  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+}
+
+#button {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
