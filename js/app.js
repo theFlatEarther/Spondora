@@ -21,6 +21,7 @@ let recommendedPlayList = [];
 // question element in html
 const questionElem = document.getElementById('question')
 const ulQuestionElem = document.getElementById('question_ul')
+const buttonElem = document.getElementById('submit')
 
 
 let questionOneSong = null;
@@ -245,9 +246,24 @@ function q6HandleClick() {
       break;      
   }
 }
+function handleSubmit(){
+  // console.log('it works!')
+  recommendedPlayList.push(questionSixSong)
+  addToLocalStorage();
+  // console.log(recommendedPlayList)
+}
 
+function addToLocalStorage(){
+  const jsonAllItemsArray = JSON.stringify(recommendedPlayList)
+  localStorage.setItem('playlist', jsonAllItemsArray)
+}
+
+function getFromLocalStorage(){
+  const jsonAllItemsArray =localStorage.getItem('playlist')
+  console.log(jsonAllItemsArray)
+}
 // __________________________________ Event Listeners  __________________________________ 
-
+buttonElem.addEventListener('click', handleSubmit)
 
 ulQuestionElem.addEventListener('click', q1HandleClick)
 ulQuestionElem.addEventListener('click', q2HandleClick)
@@ -489,3 +505,5 @@ questionNumber6[9].push(
   new Song("La Vie En Rose", "lady gaga", "a star is born"),
   new Song('shallow', 'lady gaga, bradley cooper', 'a star is born'),
 );
+
+getFromLocalStorage();
