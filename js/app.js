@@ -52,9 +52,9 @@ function Song(name, artist, album, id) {
 // __________________________________ Global Functions __________________________________ 
 
 // random item from array
-function randomArrayItem(arra) {
-  let index = Math.floor((Math.random() * arra.length));
-  return arra[index];
+function randomArrayItem(array) {
+  let index = Math.floor((Math.random() * array.length));
+  return array[index];
 }
 
 function q1HandleClick() {
@@ -132,20 +132,22 @@ function q3HandleClick() {
 // question 4 handler
 
 function q4HandleClick() {
+  console.log(event.target.id)
   switch (event.target.id) {
-    case "winter":
+    case 'q4a1':
       currentSong = randomArrayItem(questionNumber4[0]);
       console.log("added " + event.target.id);
       break;
-    case "spring":
+    case 'q4a2':
       currentSong = randomArrayItem(questionNumber4[1]);
       console.log("added " + event.target.id);
       break;
-    case "summer":
+    case 'q4a3':
       currentSong = randomArrayItem(questionNumber4[2]);
       console.log("added " + event.target.id);
       break;
   }
+  console.log(currentSong)
   renderButtonPageFour();
 }
 
@@ -154,19 +156,19 @@ function q4HandleClick() {
 function q5HandleClick() {
   console.log(event.target.id)
   switch(event.target.id) {
-    case 'myspace':
+    case 'q5a1':
       currentSong = randomArrayItem(questionNumber5[0])
       console.log('added '+ event.target.id);
       break;
-    case 'facebook':
+    case 'q5a2':
       currentSong = randomArrayItem(questionNumber5[1]);
       console.log("added " + event.target.id);
       break;
-    case 'insta':
+    case 'q5a3':
       currentSong = randomArrayItem(questionNumber5[2]);
       console.log("added " + event.target.id);
       break;
-    case 'tiktok':
+    case 'q5a4':
       currentSong = randomArrayItem(questionNumber5[3]);
       console.log("added " + event.target.id);
       break;
@@ -179,43 +181,43 @@ function q5HandleClick() {
 function q6HandleClick() {
   // debugger;
   switch(event.target.id) {
-    case 'titanic':
+    case 'q6a1':
       currentSong = randomArrayItem(questionNumber6[0])
       console.log("case 1 current song is" + currentSong)
       break;
-    case 'interstellar':
+    case 'q6a2':
       currentSong = randomArrayItem(questionNumber6[1]);
       console.log("case 2 current song is" + currentSong);
       break;
-    case 'grease':
+    case 'q6a3':
       currentSong = randomArrayItem(questionNumber6[2]);
       console.log("case 3 current song is" + currentSong);
       break;
-    case '8_mile':
+    case 'q6a4':
       currentSong = randomArrayItem(questionNumber6[3]);
       console.log("case 4 current song is" + currentSong);
       break;
-    case 'tarzan':
+    case 'q6a5':
       currentSong = randomArrayItem(questionNumber6[4]);
       console.log("case 5 current song is" + currentSong);
       break;
-    case 'school':
+    case 'q6a6':
       currentSong = randomArrayItem(questionNumber6[5]);
       console.log("case 6 current song is" + currentSong);
       break;
-    case 'pulp_fiction':
+    case 'q6a7':
       currentSong = randomArrayItem(questionNumber6[6]);
       console.log("case 7 current song is" + currentSong);
       break;
-    case 'guardians':
+    case 'q6a8':
       currentSong = randomArrayItem(questionNumber6[7]);
       console.log("case 8 current song is" + currentSong);
       break;
-    case 'breakfast':
+    case 'q6a9':
       currentSong = randomArrayItem(questionNumber6[8]);
       console.log("case 9 current song is" + currentSong);
       break;
-    case 'star':
+    case 'q6a10':
       currentSong = randomArrayItem(questionNumber6[9]);
       console.log("case 10 current song is" + currentSong);
       break;      
@@ -241,8 +243,9 @@ function getFromLocalStorage() {
     const normalizedArray = JSON.parse(fromStorage)
     console.log( "normalized array is ")
     console.log(normalizedArray)
-    for (let item of normalizedArray) {
-      let tempSong = new Song(item.name, item.artist, item.album)
+    for (let song of normalizedArray) {
+      console.log(song)
+      let tempSong = new Song(song.name, song.artist, song.album)
       Song.recommendedPlayList.push(tempSong)
       console.log('rec playlist is')
       console.log(Song.recommendedPlayList)
@@ -270,7 +273,7 @@ function generatePlayList() {
   for (let song of Song.recommendedPlayList) {
     const liEle = document.createElement('li')
     liEle.textContent = `${song.name} by ${song.artist}. Album ${song.album}.`;
-    console.log(liEle)
+    console.log()
     ulEle.appendChild(liEle);
   }
 }
@@ -323,7 +326,6 @@ function renderButtonPageSix() {
   newButton.addEventListener("click", handleSubmit);
 }
 
-
 // __________________________________ Event Listeners  __________________________________ 
 
 if(question1Elem) {
@@ -355,7 +357,7 @@ if (question6Elem) {
 // question 1
 //Roadtrip
 questionNumber1[0].push(
-    new Song ('Hotel California', 'The Eagles', 'Hotel California',),
+    new Song ('Hotel California', 'The Eagles', 'Hotel California'),
     new Song ('Beast of Burden', 'The Rolling Stones', 'Some Girls'),
     new Song ('Dreams', 'Fleetwood Mac', 'Rumours'),
     new Song ('Easy', 'Commodores', 'Commodores'),
@@ -416,7 +418,6 @@ questionNumber2[3].push(
   new Song ('So Far Away', 'Carole King', 'In Concer',),
   new Song ('If I Ain\'t Got You', 'Alicia Keys', 'The Diary of Alicia Keys',),
 )
-
 // question 3
 //60's music
 questionNumber3[0].push(
@@ -483,7 +484,6 @@ questionNumber4[2].push(
   new Song ('Essence', 'WizKid', 'Made in Lagos'),
   new Song ('BeatBox', 'SpotemGottem', 'Beat Box'),
 );
-
 // question 5
 //Facebook
 questionNumber5[0].push(
@@ -502,7 +502,6 @@ questionNumber5[1].push(
   new Song ('Wants and Needs','Drake & Lil Baby','Scary Hours 2'),
   new Song ('Fireworks','ATEEZ','ZERO: FEVER Part.2Fac'),
 );
-
 //Twitter
 questionNumber5[2].push(
   new Song ('Jail','Kanye West','Donda'),
@@ -511,7 +510,6 @@ questionNumber5[2].push(
   new Song ('Pepas','Farruko','Pepas'),
   new Song ('good 4 u','Olivia Rodrigo','SOUR'),
 );
-
 //Myspace
 questionNumber5[3].push(
   new Song ('Bring It','Cobra Starship','While the City Sleeps, We Rule the Streets'),
@@ -520,14 +518,12 @@ questionNumber5[3].push(
   new Song ('Misery Business','Paramore','Riot'),
   new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t You Fake It'),
 );
-
 // question 6
 questionNumber6[0].push(
   new Song("my heart will go on", "celine dion", "titanic"),
   new Song("hymn to the sea", "james hornes", "titanic"),
   new Song("my heart will go on", "celine dion", "titanic"),
 );
-
 questionNumber6[1].push(
   new Song("cornfield chase’, ‘hans zimmer’, ‘interstellar"),
   new Song("no time for caution", "hans zimmer", "interstellar"),
@@ -535,35 +531,29 @@ questionNumber6[1].push(
   new Song("mountains", "hans zimmer", "interstellar"),
   new Song("dreaming of the crash", "hans zimmer", "interstellar")
 );
-
 questionNumber6[2].push(
   new Song("you’re the one that I want", 'john travolta, olivia newton-john', 'grease'),
   new Song("hopelessly devoted to you", "john travolta, olivia newton-john", "grease")
 );
-
 questionNumber6[3].push(
   new Song("lose yourself", "eminem", "8 mile"),
   new Song("8 mile", "eminem", "8 mile"),
   new Song("rap game", "D12", "8 mile")
 );
-
 questionNumber6[4].push(
   new Song("you’ll be in my heart", 'phil collins', 'tarzan'),
   new Song("two worlds", "phil collins", "tarzan")
 );
-
 questionNumber6[5].push(
   new Song('edge of seventeen', 'stevie nicks', 'school of rock'),
   new Song("iron man", "black sabbath", "school of rock")
 );
-
 questionNumber6[6].push(
   new Song("you never can tell", "chuck berry", "pulp fiction"),
   new Song("dancing queen", "abba", "pulp fiction"),
   new Song("satisfied mind", "johnny cash", "pulp fiction"),
   new Song("you never can tell", "chuck berry", "pulp fiction")
 );
-
 questionNumber6[7].push(
   new Song('mr. blue sky', 'electric light orchestra', 'guardians of the galaxy'),
   new Song("lake shore drive", "aliotta haynes jeremiah", "guardians of the galaxy"),
@@ -572,12 +562,10 @@ questionNumber6[7].push(
   new Song("cherry bomb", "the runaways", "guardians of the galaxy"),
   new Song("ain't no mountain high enough", "marvin gaye, tammi terrel", "guardians of the galaxy"),
 );
-
 questionNumber6[8].push(
   new Song("don’t you (forget about me)", 'simple minds', 'the breakfast club'),
   new Song("we are not alone", 'karla devito', 'the breakfast club')
 );
-
 questionNumber6[9].push(
   new Song('shallow', 'lady gaga, bradley cooper', 'a star is born'),
   new Song("always remember us this way", "lady gaga, bradley cooper", "a star is born"),
@@ -585,5 +573,6 @@ questionNumber6[9].push(
   new Song("La Vie En Rose", "lady gaga", "a star is born"),
   new Song('shallow', 'lady gaga, bradley cooper', 'a star is born'),
 );
-generatePlayList();
+
 getFromLocalStorage();
+generatePlayList();
