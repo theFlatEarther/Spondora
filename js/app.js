@@ -16,7 +16,7 @@ const questionNumber5 = [[],[],[],[]];
 const questionNumber6 = [[],[],[],[],[],[],[],[],[],[]];
 
 // final playlist recommendation
-let recommendedPlayList = [];
+Song.recommendedPlayList = [];
 
 // question element in html
 const question1Elem = document.getElementById('question1');
@@ -27,14 +27,7 @@ const question5Elem = document.getElementById('question5');
 const question6Elem = document.getElementById("question6");
 const ulQuestionElem = document.getElementById('question_ul')
 const buttonElem = document.getElementById('submit')
-
-
-let questionOneSong = null;
-let questionTwoSong = null;
-let questionThreeSong = null;
-let questionFourSong = null;
-let questionFiveSong = null;
-let questionSixSong = null;
+const newListsElem = document.getElementById('savedLists')
 
 let currentSong = null;
 
@@ -45,12 +38,11 @@ function Song(name, artist, album, id) {
   this.name = name;
   this.artist = artist;
   this.album = album;
-  this.id = id;
 }
 
-//make the question
-//event handler
-//buttons for the pages
+//render playlist
+//hide the buttons
+//enter name
 
 
 // __________________________________ Prototype Methods __________________________________ 
@@ -62,38 +54,6 @@ function randomArrayItem(arra) {
   let index = Math.floor((Math.random() * arra.length));
   return arra[index];
 }
-
-
-// make an html elem, can insert text and/or attribute
-function _makeElem(tag, parent, text=null, attribute=null, attributeValue=null) {
-  let Elem = document.createElement(tag);
-  parent.appendChild(Elem);
-  if (text) {
-    Elem.textContent = text;
-  }
-  if (attribute) {
-    Elem.setAttribute(attribute, attributeValue);
-  }
-  return Elem;
-}
-
-// return playlist from recommended array, append ul and li per song
-function generatePlaylist() {
-  let ulElem = document.createElement('ul')
-  questionElem.appendChild(ulElem)
-  for (let song of recommendedPlayList) {
-    const liElem = document.createElement('li')
-    liElem.textContent = `${song.name} by ${song.artist}. Album ${song.album}.`;
-    ulElem.appendChild(liElem)
-  }
-}
-
-// // add song to recommended array
-// function addSongToPlayList(song) {
-//   recommendedPlayList.push(song);
-// }
-
-// return a random song from the applicable array based on user click
 
 function q1HandleClick() {
 
@@ -262,13 +222,13 @@ function q6HandleClick() {
 }
 function handleSubmit(){
   // console.log('it works!')
-  recommendedPlayList.push(currentSong)
+  Song.recommendedPlayList.push(currentSong)
   addToLocalStorage();
   // console.log(recommendedPlayList)
 }
 
 function addToLocalStorage() {
-  const jsonAllItemsArray = JSON.stringify(recommendedPlayList)
+  const jsonAllItemsArray = JSON.stringify(Song.recommendedPlayList)
   localStorage.setItem('playlist', jsonAllItemsArray)
 }
 
@@ -280,9 +240,9 @@ function getFromLocalStorage() {
     console.log(normalizedArray)
     for (let item of normalizedArray) {
       let tempSong = new Song(item.name, item.artist, item.album)
-      recommendedPlayList.push(tempSong)
+      Song.recommendedPlayList.push(tempSong)
       console.log('rec playlist is')
-      console.log(recommendedPlayList)
+      console.log(Song.recommendedPlayList)
     }
   }
 }
@@ -334,6 +294,48 @@ function renderButtonPageSix() {
   let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
   newButton.addEventListener("click", handleSubmit);
 }
+
+// make an html elem, can insert text and/or attribute
+function _makeElem(tag, parent, text=null, attribute=null, attributeValue=null) {
+  let Elem = document.createElement(tag);
+  parent.appendChild(Elem);
+  if (text) {
+    Elem.textContent = text;
+  }
+  if (attribute) {
+    Elem.setAttribute(attribute, attributeValue);
+  }
+  return Elem;
+}
+
+// return playlist from recommended array, append ul and li per song
+// function generateSong() {
+//   let ulElem = document.createElement('ul')
+//   questionElem.appendChild(ulElem)
+//   for (let song of Song.recommendedPlayList) {
+//     const liElem = document.createElement('li')
+//     liElem.textContent = `${song.name} by ${song.artist}. Album ${song.album}.`;
+//     ulElem.appendChild(liElem)
+//   }
+// }
+
+Song.prototype.generateSong = function(body) {
+  const rowElem = document.createElement('tr');
+  body.appendChild(rowElem);
+  const thElem = makeEle('th', rowElem, this.name);
+  _makeElem('td', rowEle, this.artist);
+  _makeElem('td', rowEle, this.album);
+};
+
+
+console.log(Song.prototype.generateSong)
+function generatePlayLists(){
+  let tbodyElem = _makeElem('tbody', newListsElem, null);
+  for (let i = 0; i < Song.recommendedPlayList.length; i++){
+    Song.recommendedPlayList[i].generateSong(tbodyElem);
+  }
+}
+console.log(generatePlayLists())
 
 // __________________________________ Event Listeners  __________________________________ 
 
@@ -475,64 +477,64 @@ questionNumber3[4].push(
 // question 4
 //Fall/Winter
 questionNumber4[0].push(
-  new Song ('If I Could Fly', 'One Direction', 'Made in the A.M.', 1),
-  new Song ('September', 'Earth, Wind & Fire', 'The Best of Earth, Wind & Fire, Vol. 1', 1),
-  new Song ('Only Exception', 'Paramore', 'Brand New Eyes', 1),
-  new Song ('Maps', 'Yeah Yeah Yeahs', 'Fever to Tell', 1),
-  new Song ('Ho Hey', 'Lumineers', 'The Lumineers', 1),
+  new Song ('If I Could Fly', 'One Direction', 'Made in the A.M.'),
+  new Song ('September', 'Earth, Wind & Fire', 'The Best of Earth, Wind & Fire, Vol'),
+  new Song ('Only Exception', 'Paramore', 'Brand New Eyes'),
+  new Song ('Maps', 'Yeah Yeah Yeahs', 'Fever to Tell'),
+  new Song ('Ho Hey', 'Lumineers', 'The Lumineers'),
 );
 //Spring
 questionNumber4[1].push(
-  new Song ('Hey There Delilah', 'Plain White T\’s', 'All That We Needed and Every Second Counts', 2),
-  new Song ('OTW', 'Khalid', 'OTW', 2),
-  new Song ('What Do You Mean', 'Justin Bieber', 'Purpose', 2),
-  new Song ('Infinity Guitars', 'Sleigh Bells', 'Treats', 2),
-  new Song ('Closer', 'The Chainsmokers, Halsey', 'Collage', 2),
+  new Song ('Hey There Delilah', 'Plain White T\’s', 'All That We Needed and Every Second Counts'),
+  new Song ('OTW', 'Khalid', 'OTW'),
+  new Song ('What Do You Mean', 'Justin Bieber', 'Purpose'),
+  new Song ('Infinity Guitars', 'Sleigh Bells', 'Treats'),
+  new Song ('Closer', 'The Chainsmokers, Halsey', 'Collage'),
 );
 //Summer
 questionNumber4[2].push(
-  new Song ('Shape Of You', 'Ed Sheeran', '+', 3),
-  new Song ('This is What You Came For', 'Calvin Harris', 'This is What You Came For', 3),
-  new Song ('Zanzibar', 'Kamaliza', 'Zanzibar', 3),
-  new Song ('Essence', 'WizKid', 'Made in Lagos', 3),
-  new Song ('BeatBox', 'SpotemGottem', 'Beat Box', 3),
+  new Song ('Shape Of You', 'Ed Sheeran', '+'),
+  new Song ('This is What You Came For', 'Calvin Harris', 'This is What You Came For'),
+  new Song ('Zanzibar', 'Kamaliza', 'Zanzibar'),
+  new Song ('Essence', 'WizKid', 'Made in Lagos'),
+  new Song ('BeatBox', 'SpotemGottem', 'Beat Box'),
 );
 
 // question 5
 //Facebook
 questionNumber5[0].push(
-  new Song ('STAY', 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU',1),
-  new Song ('Low', 'Flo Rida & T-Pain', 'Mail on Sunday', 1),
-  new Song ('Because You Move Me', 'Tinlicker & Helsloot', 'Because You Move ', 1),
-  new Song ('One Dance', 'Drake', 'single', 1 ),
-  new Song ('Bad Guy','Billie Eilish', 'When We All Fall Asleep, Where Do We Go', 1),
+  new Song ('STAY', 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU'),
+  new Song ('Low', 'Flo Rida & T-Pain', 'Mail on Sunday'),
+  new Song ('Because You Move Me', 'Tinlicker & Helsloot', 'Because You Move '),
+  new Song ('One Dance', 'Drake', 'single'),
+  new Song ('Bad Guy','Billie Eilish', 'When We All Fall Asleep, Where Do We Go'),
 );
 
 //Instagram
 questionNumber5[1].push(
-  new Song ('Butter', 'BTS','n/a', 2),
-  new Song ('Stronger', 'Kanye West','Graduation', 2),
-  new Song ('Crazy In Love', 'Beyonce & Jay-Z','Dangerously In LoveDrake', 2),
-  new Song ('Wants and Needs','Drake & Lil Baby','Scary Hours 2', 2),
-  new Song ('Fireworks','ATEEZ','ZERO: FEVER Part.2Fac', 2),
+  new Song ('Butter', 'BTS','n/a'),
+  new Song ('Stronger', 'Kanye West','Graduation'),
+  new Song ('Crazy In Love', 'Beyonce & Jay-Z','Dangerously In LoveDrake'),
+  new Song ('Wants and Needs','Drake & Lil Baby','Scary Hours 2'),
+  new Song ('Fireworks','ATEEZ','ZERO: FEVER Part.2Fac'),
 );
 
 //Twitter
 questionNumber5[2].push(
-  new Song ('Jail','Kanye West','Donda', 3),
-  new Song ('INDUSTRY BABY','Lil Nax X & Jack Harlow','INDUSTRY BABY & Jack Harlows', 3),
-  new Song ('Bad Habits','Ed Sheeran','Bad Habits', 3),
-  new Song ('Pepas','Farruko','Pepas', 3),
-  new Song ('good 4 u','Olivia Rodrigo','SOUR', 3),
+  new Song ('Jail','Kanye West','Donda'),
+  new Song ('INDUSTRY BABY','Lil Nax X & Jack Harlow','INDUSTRY BABY & Jack Harlows'),
+  new Song ('Bad Habits','Ed Sheeran','Bad Habits'),
+  new Song ('Pepas','Farruko','Pepas'),
+  new Song ('good 4 u','Olivia Rodrigo','SOUR'),
 );
 
 //Myspace
 questionNumber5[3].push(
-  new Song ('Bring It','Cobra Starship','While the City Sleeps, We Rule the Streets', 4),
-  new Song ('1985','bowling for Soup','A Hangover You Don\'t Deserve', 4),
-  new Song ('One Week','Barenaked Ladies','Stunt', 4),
-  new Song ('Misery Business','Paramore','Riot', 4),
-  new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t You Fake It', 4),
+  new Song ('Bring It','Cobra Starship','While the City Sleeps, We Rule the Streets'),
+  new Song ('1985','bowling for Soup','A Hangover You Don\'t Deserve'),
+  new Song ('One Week','Barenaked Ladies','Stunt'),
+  new Song ('Misery Business','Paramore','Riot'),
+  new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t You Fake It'),
 );
 
 // question 6
@@ -599,5 +601,5 @@ questionNumber6[9].push(
   new Song("La Vie En Rose", "lady gaga", "a star is born"),
   new Song('shallow', 'lady gaga, bradley cooper', 'a star is born'),
 );
-
+generatePlayLists();
 getFromLocalStorage();
