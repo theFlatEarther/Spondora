@@ -31,6 +31,8 @@ const newListsElem = document.getElementById('savedLists')
 
 let currentSong = null;
 
+
+
 // __________________________________ Constructor Functions  __________________________________ 
 
 // create a song object, accept name, artist, album, and optional img artwork
@@ -234,7 +236,8 @@ function addToLocalStorage() {
 
 function getFromLocalStorage() {
   const fromStorage = localStorage.getItem('playlist')
-  if (fromStorage) {
+    console.log(fromStorage)
+  if (fromStorage !== null) {
     const normalizedArray = JSON.parse(fromStorage)
     console.log( "normalized array is ")
     console.log(normalizedArray)
@@ -244,6 +247,31 @@ function getFromLocalStorage() {
       console.log('rec playlist is')
       console.log(Song.recommendedPlayList)
     }
+  }
+}
+
+
+// make an html elem, can insert text and/or attribute
+function _makeElem(tag, parent, text=null, attribute=null, attributeValue=null) {
+  let Elem = document.createElement(tag);
+  parent.appendChild(Elem);
+  if (text) {
+    Elem.textContent = text;
+  }
+  if (attribute) {
+    Elem.setAttribute(attribute, attributeValue);
+  }
+  return Elem;
+}
+
+function generatePlayList() {
+  const ulEle = document.getElementById('savedLists')
+  ulEle.innerHTML = '';
+  for (let song of Song.recommendedPlayList) {
+    const liEle = document.createElement('li')
+    liEle.textContent = `${song.name} by ${song.artist}. Album ${song.album}.`;
+    console.log(liEle)
+    ulEle.appendChild(liEle);
   }
 }
 
@@ -295,51 +323,8 @@ function renderButtonPageSix() {
   newButton.addEventListener("click", handleSubmit);
 }
 
-// make an html elem, can insert text and/or attribute
-function _makeElem(tag, parent, text=null, attribute=null, attributeValue=null) {
-  let Elem = document.createElement(tag);
-  parent.appendChild(Elem);
-  if (text) {
-    Elem.textContent = text;
-  }
-  if (attribute) {
-    Elem.setAttribute(attribute, attributeValue);
-  }
-  return Elem;
-}
-
-// return playlist from recommended array, append ul and li per song
-// function generateSong() {
-//   let ulElem = document.createElement('ul')
-//   questionElem.appendChild(ulElem)
-//   for (let song of Song.recommendedPlayList) {
-//     const liElem = document.createElement('li')
-//     liElem.textContent = `${song.name} by ${song.artist}. Album ${song.album}.`;
-//     ulElem.appendChild(liElem)
-//   }
-// }
-
-Song.prototype.generateSong = function(body) {
-  const rowElem = document.createElement('tr');
-  body.appendChild(rowElem);
-  const thElem = makeEle('th', rowElem, this.name);
-  _makeElem('td', rowEle, this.artist);
-  _makeElem('td', rowEle, this.album);
-};
-
-
-console.log(Song.prototype.generateSong)
-function generatePlayLists(){
-  let tbodyElem = _makeElem('tbody', newListsElem, null);
-  for (let i = 0; i < Song.recommendedPlayList.length; i++){
-    Song.recommendedPlayList[i].generateSong(tbodyElem);
-  }
-}
-console.log(generatePlayLists())
 
 // __________________________________ Event Listeners  __________________________________ 
-
-// buttonElem.addEventListener('click', handleSubmit)
 
 if(question1Elem) {
   question1Elem.addEventListener('click', q1HandleClick);
@@ -364,7 +349,6 @@ if (question5Elem) {
 if (question6Elem) {
   question6Elem.addEventListener("click", q6HandleClick);
 }
-
 
 // __________________________________ Calls __________________________________ 
 
@@ -601,5 +585,5 @@ questionNumber6[9].push(
   new Song("La Vie En Rose", "lady gaga", "a star is born"),
   new Song('shallow', 'lady gaga, bradley cooper', 'a star is born'),
 );
-generatePlayLists();
+generatePlayList();
 getFromLocalStorage();
