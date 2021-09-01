@@ -102,3 +102,28 @@ img {
   border-radius: 80px;
 }
 
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  height: 50px;
+  /* border: 1px solid red; */
+  padding: 70px;
+  color: rgba(255, 255, 255, 0.705);
+  font-family: 'megrim';
+}
+
+footer p {
+  padding: 10px;
+  position: relative;
+  bottom: 20px;
+  width: 180px;
+}
+
+footer hr {
+  border: 1px solid #ffa260;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  height: 0px;
+}
