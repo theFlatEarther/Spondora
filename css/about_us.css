@@ -1,0 +1,60 @@
+
+body {
+  color: white;
+  font-family: sans-serif;
+  /* display: flex; */
+  align-items: center;
+  justify-content: center; 
+  height: 100vh; 
+  background-color: #151b29;
+  background-image: url(https://images.unsplash.com/photo-1621246159024-e53b1d25fc1d?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2134&q=80);
+}
+
+.oval{
+  /* width: 160px; */
+  /* height: 80px; */
+  background:purple;
+  border-radius: 50%;
+}
+
+#jovincent {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 40px 0px 25px 0px;
+  
+}
+
+#bryce {
+  display: flex;
+  align-items: right;
+  padding: 40px 0px 25px 0px;
+  margin-left: 0px;
+  justify-content:flex-end;
+  flex-direction: row-reverse;
+
+}
+
+#angela {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  padding: 40px 0px 25px 0px;
+
+}
+
+#david {
+  display: flex;
+  align-items: right;
+  padding: 40px 0px 25px 0px;
+  margin-left: 0px;
+  justify-content:flex-end;
+  flex-direction: row-reverse;
+}
+
+img {
+  max-height: 200px;
+  max-width: 1500px;
+  height: auto;
+  width: auto;
+}
