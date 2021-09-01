@@ -267,6 +267,11 @@ buttonElem.addEventListener('click', handleSubmit)
 
 questionElem.addEventListener('click', q5HandleClick)
 
+var answer = document.getElementById('q1a1');
+answer.addEventListener('click', function(answer){
+  answer.target.classList.toggle('clicked');
+})
+
 // ulQuestionElem.addEventListener('click', q1HandleClick)
 // ulQuestionElem.addEventListener('click', q2HandleClick)
 // ulQuestionElem.addEventListener('click', q3HandleClick)
