@@ -116,8 +116,11 @@ button:hover {
   justify-content: center;
 }
 
-.hide {
-  display: none;
+.change {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  justify-content: center;
 }
 
 #savedLists {
@@ -127,9 +130,12 @@ button:hover {
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
+  line-height: 30px;
+  overflow: scroll;
+  overflow-x: hidden;
   margin: auto;
-  height: 750px;
-  width: 1600px;
+  height: 1000px;
+  width: 800px;
   font-family: 'raleway';
 }
 

@@ -66,6 +66,8 @@ body {
   font-family: 'raleway', sans-serif;
 }
 
+
+
 #bryce {
   display: flex;
   align-items: right;
@@ -76,6 +78,9 @@ body {
   font-family: 'raleway', sans-serif;
 }
 
+
+
+
 #angela {
   display: flex;
   align-items: left;
@@ -83,6 +88,9 @@ body {
   padding: 40px 0px 25px 0px;
   font-family: 'raleway', sans-serif;
 }
+
+
+
 
 #david {
   display: flex;
@@ -94,6 +102,8 @@ body {
   font-family: 'raleway', sans-serif;
 }
 
+
+
 img {
   max-height: 200px;
   max-width: 1500px;
@@ -101,7 +111,6 @@ img {
   width: auto;
   border-radius: 80px;
 }
-
 
 footer {
   display: flex;
@@ -127,4 +136,9 @@ footer hr {
   margin: 0px;
   padding: 0px;
   height: 0px;
+}
+
+div p {
+  align-items: center;
+  padding-top: 80px;
 }
