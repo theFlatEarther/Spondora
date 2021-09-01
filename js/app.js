@@ -19,7 +19,12 @@ const questionNumber6 = [[],[],[],[],[],[],[],[],[],[]];
 Song.recommendedPlayList = [];
 
 // question element in html
-const questionElem = document.getElementById('question')
+const question1Elem = document.getElementById('question1');
+const question2Elem = document.getElementById('question2');
+const question3Elem = document.getElementById('question3');
+const question4Elem = document.getElementById('question4');
+const question5Elem = document.getElementById('question5');
+const question6Elem = document.getElementById("question6");
 const ulQuestionElem = document.getElementById('question_ul')
 const buttonElem = document.getElementById('submit')
 const newListsElem = document.getElementById('savedLists')
@@ -70,7 +75,9 @@ function q1HandleClick() {
       console.log(currentSong)
       break;
   }
+  renderButtonPageOne();
 }
+
 function q2HandleClick() {
   
   switch(event.target.id){
@@ -91,6 +98,7 @@ function q2HandleClick() {
       console.log(currentSong)
       break;
   }
+  renderButtonPageTwo();
 }
 function q3HandleClick() {
   
@@ -116,6 +124,7 @@ function q3HandleClick() {
       console.log(currentSong)
       break;
   }
+  renderButtonPageThree();
 }
 
 // question 4 handler
@@ -135,6 +144,7 @@ function q4HandleClick() {
       console.log("added " + event.target.id);
       break;
   }
+  renderButtonPageFour();
 }
 
 
@@ -160,6 +170,7 @@ function q5HandleClick() {
       break;
     }
     console.log("current song is" + currentSong)
+    renderButtonPageFive();
 }
 
 // question 6 handler
@@ -207,6 +218,7 @@ function q6HandleClick() {
       console.log("case 10 current song is" + currentSong);
       break;      
   }
+  renderButtonPageSix();
 }
 function handleSubmit(){
   // console.log('it works!')
@@ -235,6 +247,53 @@ function getFromLocalStorage() {
   }
 }
 
+function renderButtonPageOne() {
+  let buttonDiv = document.getElementById('button_div');
+  buttonDiv.innerHTML = '';
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question2.html");
+  let newButton = _makeElem('button', aTagElem, 'Submit', 'id', 'submit')
+  newButton.addEventListener('click', handleSubmit);
+}
+
+function renderButtonPageTwo() {
+  let buttonDiv = document.getElementById("button_div");
+  buttonDiv.innerHTML = "";
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question3.html");
+  let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
+  newButton.addEventListener("click", handleSubmit);
+}
+
+function renderButtonPageThree() {
+  let buttonDiv = document.getElementById("button_div");
+  buttonDiv.innerHTML = "";
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question4.html");
+  let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
+  newButton.addEventListener("click", handleSubmit);
+}
+
+function renderButtonPageFour() {
+  let buttonDiv = document.getElementById("button_div");
+  buttonDiv.innerHTML = "";
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question5.html");
+  let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
+  newButton.addEventListener("click", handleSubmit);
+}
+
+function renderButtonPageFive() {
+  let buttonDiv = document.getElementById("button_div");
+  buttonDiv.innerHTML = "";
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question6.html");
+  let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
+  newButton.addEventListener("click", handleSubmit);
+}
+
+function renderButtonPageSix() {
+  let buttonDiv = document.getElementById("button_div");
+  buttonDiv.innerHTML = "";
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/profile.html");
+  let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
+  newButton.addEventListener("click", handleSubmit);
+}
 
 // make an html elem, can insert text and/or attribute
 function _makeElem(tag, parent, text=null, attribute=null, attributeValue=null) {
@@ -277,16 +336,34 @@ function generatePlayLists(){
   }
 }
 console.log(generatePlayLists())
+
 // __________________________________ Event Listeners  __________________________________ 
 
-buttonElem.addEventListener('click', handleSubmit)
+// buttonElem.addEventListener('click', handleSubmit)
 
-questionElem.addEventListener('click', q1HandleClick)
-questionElem.addEventListener('click', q2HandleClick)
-questionElem.addEventListener('click', q3HandleClick)
-questionElem.addEventListener('click', q4HandleClick)
-questionElem.addEventListener('click', q5HandleClick)
-questionElem.addEventListener("click", q6HandleClick);
+if(question1Elem) {
+  question1Elem.addEventListener('click', q1HandleClick);
+}
+
+if(question2Elem) {
+  question2Elem.addEventListener('click', q2HandleClick);
+}
+
+if (question3Elem) {
+  question3Elem.addEventListener('click', q3HandleClick);
+}
+
+if (question4Elem) {
+  question4Elem.addEventListener('click', q4HandleClick);
+}
+
+if (question5Elem) {
+  question5Elem.addEventListener('click', q5HandleClick);
+}
+
+if (question6Elem) {
+  question6Elem.addEventListener("click", q6HandleClick);
+}
 
 
 // __________________________________ Calls __________________________________ 
