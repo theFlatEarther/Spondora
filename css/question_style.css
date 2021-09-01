@@ -96,3 +96,6 @@ button:hover {
   justify-content: center;
 }
 
+.hide {
+  display: none;
+}

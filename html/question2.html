@@ -16,9 +16,9 @@
         <div id="nav">
             <nav>
                 <ul>
-                    <a id="navi" href="">Home</a>
-                    <a id="navi" href="">Playlist</a>
-                    <a id="navi" href="">About Us</a>
+                    <a id="navi" href="../index.html">Home</a>
+                    <a id="navi" href="../profile.html">Playlist</a>
+                    <a id="navi" href="../about_us.html">About Us</a>
                 </ul>
             </nav>
         </div>
@@ -71,7 +71,7 @@
         
          // traverses the <img> elements, and register onclick to each one
          // else, apply the properties defined in $imgProp
-         for(i=0; i<nrallimgs; i++) {
+         for(i=0; i < nrallimgs; i++) {
          allimgs[i].onclick=function() {
          // if borderStyle is already applied, anulates the 'padding', 'background' and 'border' properties
          if(this.style.borderStyle == imgProp.borderStyle) {
