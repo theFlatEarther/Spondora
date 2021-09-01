@@ -6,37 +6,118 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/question_styleQ6.css">
 </head>
 <body>
     <header>
         <div>
-        <img src="" alt="">
+            <img src="../img/LOGO.png">
         </div>
-        <nav>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-        </nav>
+        <div id="nav">
+            <nav>
+                <ul>
+                    <a id="navi" href="">Home</a>
+                    <a id="navi" href="">Playlist</a>
+                    <a id="navi" href="">About Us</a>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <div id="question6">
-            <ul id="question_ul">
-                <img src="../img/titanic.jpg" id="titanic">Titanic</img>
-                <img src="../img/interstellar.jpeg" id="interstellar">Interstellar</img>
-                <img src="../img/grease.jpg" id="grease">Grease</img>
-                <img src="../img/8mile.jpg" id="8_mile">8 mile</img>
-                <img src="../img/tarzan.webp" id="tarzan">Tarzan</img>
-                <img src="../img/schoolofrock.jpg" id="school">School of Rock</img>
-                <img src="../img/pulpfiction.jpg" id="pulp_fiction">Pulp Fiction</img>
-                <img src="../img/Guardians_of_the_Galaxy.jpg" id="guardians">Guardians of the Galaxy</img>
-                <img src="../img/breakfastclub.jpg" id="breakfast">Breakfast Club</img>
-                <img src="../img/star.png" id="star">A Star is Born</img>
-            </ul>
+
+        <div id="images" class="q6">
+            <div id="question6" class="question">
+                    <div>
+                        <img src="https://place-hold.it/300" id="q6a1" alt="Titanic">
+                        <p>Titanic</p>
+                    </div>
+                    <div>
+                        <img src="https://place-hold.it/300" id="q6a2" alt="Interstellar">
+                        <p>Interstellar</p>
+                    </div>
+                    <div> 
+                        <img src="https://place-hold.it/300" id="q6a3" alt="Grease">
+                        <p>Grease</p>
+                    </div>
+                    <div>
+                        <img src="https://place-hold.it/300" id="q6a4" alt="8 Mile">
+                        <p>8 Mile</p>
+                    </div>
+                    <div>
+                        <img src="https://place-hold.it/300" id="q6a5" alt="Tarzan">
+                        <p>Tarzan</p>
+                    </div>
+                    <div>
+                        <img src="https://place-hold.it/300" id="q6a6" alt="School of Rock">
+                        <p>School of Rock</p>
+                    </div>
+                    <div>
+                        <img src="https://place-hold.it/300" id="q6a7" alt="Pulp Fiction">
+                        <p>Pulp Fiction</p>
+                    </div>
+                    <div>
+                        <img src="https://place-hold.it/300" id="q6a8" alt="Guardians of the Galaxy">
+                        <p>Guardians of the Galaxy</p>
+                    </div>
+                    <div>
+                        <img src="https://place-hold.it/300" id="q6a9" alt="Breakfast Club">
+                        <p>Breakfast Club</p>
+                    </div>
+                    <div>
+                        <img src="https://place-hold.it/300" id="q6a10" alt="A Star is Born">
+                        <p>A Star is Born</p>
+                </div>
+            </div>
+        </div>
+    <div id="button" class="button">
+        <a href="../html/profile.html">
+            <button id="submit">Submit</button>
+        </a>
+    </div>
         </div>
         <div id="button_div"></div>
     </main>
     <footer><p>Spondora</p></footer>
     <script src="../js/app.js"></script>
+    <script>
+        // set image properties, for Highlight effect added when click
+        var imgProp = {
+         'padding': '3px',
+         'backgroundColor': '#eded01',
+         'borderSize': '1ps',
+         'borderStyle': 'dashed',
+         'borderColor': '#0001fe'
+        };
+        
+        // function to highlight IMGs on click - from: https://coursesweb.net/
+        function highlightImg() {
+         // gets all <img> tags, and their number
+         var allimgs = document.getElementsByTagName('img');
+         var nrallimgs = allimgs.length;
+        
+         // traverses the <img> elements, and register onclick to each one
+         // else, apply the properties defined in $imgProp
+         for(i=0; i<nrallimgs; i++) {
+         allimgs[i].onclick=function() {
+         // if borderStyle is already applied, anulates the 'padding', 'background' and 'border' properties
+         if(this.style.borderStyle == imgProp.borderStyle) {
+         this.style.padding = 'auto';
+         this.style.background = 'none';
+         this.style.border = 'none';
+         }
+         else {
+         this.style.padding = imgProp.padding;
+         this.style.backgroundColor = imgProp.backgroundColor;
+         this.style.borderSize = imgProp.borderSize;
+         this.style.borderStyle = imgProp.borderStyle;
+         this.style.borderColor = imgProp.borderColor;
+         }
+         }
+         }
+        }
+        
+        // calls the highlightImg() function to apply the effect
+        highlightImg();
+        </script>
 </body>
 </html>
