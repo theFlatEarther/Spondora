@@ -513,58 +513,58 @@ questionNumber5[3].push(
 );
 // question 6
 questionNumber6[0].push(
-  new Song("my heart will go on", "celine dion", "titanic"),
-  new Song("hymn to the sea", "james hornes", "titanic"),
-  new Song("my heart will go on", "celine dion", "titanic"),
+  new Song("My Heart Will Go On", "Celine Dion", "Titanic"),
+  new Song("Hymn to The Sea", "James Hornes", "Titanic"),
+  new Song("My Heart Will Go On", "Celine Dion", "Titanic"),
 );
 questionNumber6[1].push(
-  new Song("cornfield chase’, ‘hans zimmer’, ‘interstellar"),
-  new Song("no time for caution", "hans zimmer", "interstellar"),
-  new Song("S.T.A.Y.", "hans zimmer", "interstellar"),
-  new Song("mountains", "hans zimmer", "interstellar"),
-  new Song("dreaming of the crash", "hans zimmer", "interstellar")
+  new Song("Cornfield Chase’, ‘Hans Zimmer’, ‘Interstellar"),
+  new Song("No Time for Caution", "Hans Zimmer", "Interstellar"),
+  new Song("S.T.A.Y.", "Hans Zimmer", "Interstellar"),
+  new Song("Mountains", "Hans Zimmer", "Interstellar"),
+  new Song("Dreaming of the Crash", "Hans Zimmer", "Interstellar")
 );
 questionNumber6[2].push(
-  new Song("you’re the one that I want", 'john travolta, olivia newton-john', 'grease'),
-  new Song("hopelessly devoted to you", "john travolta, olivia newton-john", "grease")
+  new Song("You’re the One That I Want", 'John Travolta, Olivia Newton-John', 'Grease'),
+  new Song("Hopelessly Devoted to You", "John Travolta, Olivia Newton-John", "Grease")
 );
 questionNumber6[3].push(
-  new Song("lose yourself", "eminem", "8 mile"),
-  new Song("8 mile", "eminem", "8 mile"),
-  new Song("rap game", "D12", "8 mile")
+  new Song("Lose Yourself", "eminem", "8 Mile"),
+  new Song("8 Mile", "eminem", "8 Mile"),
+  new Song("Rap Game", "D12", "8 Mile")
 );
 questionNumber6[4].push(
-  new Song("you’ll be in my heart", 'phil collins', 'tarzan'),
-  new Song("two worlds", "phil collins", "tarzan")
+  new Song("You’ll be in my Heart", 'Phil Collins', 'Tarzan'),
+  new Song("Two Worlds", "Phil Collins", "Tarzan")
 );
 questionNumber6[5].push(
-  new Song('edge of seventeen', 'stevie nicks', 'school of rock'),
-  new Song("iron man", "black sabbath", "school of rock")
+  new Song('Edge of Seventeen', 'Stevie Nicks', 'School of Rock'),
+  new Song("Iron Man", "Black Sabbath", "School of Rock")
 );
 questionNumber6[6].push(
-  new Song("you never can tell", "chuck berry", "pulp fiction"),
-  new Song("dancing queen", "abba", "pulp fiction"),
-  new Song("satisfied mind", "johnny cash", "pulp fiction"),
-  new Song("you never can tell", "chuck berry", "pulp fiction")
+  new Song("You Never Can Tell", "Chuck Berry", "Pulp Fiction"),
+  new Song("Dancing Queen", "ABBA", "Pulp Fiction"),
+  new Song("Satisfied Mind", "Johnny Cash", "Pulp Fiction"),
+  new Song("You Never Can Tell", "Chuck Berry", "Pulp Fiction")
 );
 questionNumber6[7].push(
-  new Song('mr. blue sky', 'electric light orchestra', 'guardians of the galaxy'),
-  new Song("lake shore drive", "aliotta haynes jeremiah", "guardians of the galaxy"),
-  new Song("the chain", "fleetwood mac", "guardians of the galaxy"),
-  new Song("fox on the run", "sweet", "guardians of the galaxy"),
-  new Song("cherry bomb", "the runaways", "guardians of the galaxy"),
-  new Song("ain't no mountain high enough", "marvin gaye, tammi terrel", "guardians of the galaxy"),
+  new Song('Mr. Blue Sky', 'Electric Light Orchestra', 'Guardians of the Galaxy'),
+  new Song("Lake Shore Drive", "Aliotta Haynes Jeremiah", "Guardians of the Galaxy"),
+  new Song("The Chain", "Fleetwood Mac", "Guardians of the Galaxy"),
+  new Song("Fox on the Run", "Sweet", "Guardians of the Galaxy"),
+  new Song("Cherry Bomb", "The Runaways", "Guardians of the Galaxy"),
+  new Song("Ain't No Mountain High Enough", "Marvin Gaye, Tammi Terrel", "Guardians of the Galaxy"),
 );
 questionNumber6[8].push(
-  new Song("don’t you (forget about me)", 'simple minds', 'the breakfast club'),
-  new Song("we are not alone", 'karla devito', 'the breakfast club')
+  new Song("Don’t You (Forget About Me)", 'Simple Minds', 'The Breakfast Club'),
+  new Song("We Are Not Alone", 'Karla Devito', 'The Breakfast Club')
 );
 questionNumber6[9].push(
-  new Song('shallow', 'lady gaga, bradley cooper', 'a star is born'),
-  new Song("always remember us this way", "lady gaga, bradley cooper", "a star is born"),
-  new Song("black eyes", "bradley cooper", "a star is born"),
-  new Song("La Vie En Rose", "lady gaga", "a star is born"),
-  new Song('shallow', 'lady gaga, bradley cooper', 'a star is born'),
+  new Song('Shallow', 'Lady Gaga, Bradley Cooper', 'A Star is Born'),
+  new Song("Always Remember Us This Way", "Lady Gaga, Bradley Cooper", "A Star is Born"),
+  new Song("Black Eyes", "Bradley Cooper", "A Star is Born"),
+  new Song("La Vie En Rose", "lady gaga", "A Star is Born"),
+  new Song('Shallow', 'Lady Gaga, Bradley Cooper', 'A Star is Born'),
 );
 
 getFromLocalStorage();
