@@ -102,3 +102,9 @@ button:hover {
   justify-content: center;
 }
 
+#qText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 50px;
+}
