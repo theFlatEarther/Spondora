@@ -12,18 +12,28 @@ body {
 
 
 ul {
-  background-color: blueviolet;
+  /* background-color: blueviolet; */
   display:flex;
   align-items: right;
   justify-content:flex-end;
+  padding: 25px 0px 25px 0px;
 } 
 
 #navi {
   padding:0px 10px 0px 10px ;
 }
 
+#nav{
+  background: none;
+  color: #ffa260;
+  border: 2px solid;
+}
+
 a {
   text-decoration: none;
+  color: #ffa260;
+  transition: all 0.2s;
+  font-size: larger;
 }
 
 
@@ -39,8 +49,18 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px 0px 25px 0px;
 }
 
+img{
+  transition: all 0.2s;
+}
+
+img:hover{
+  -webkit-transform: scale(1.3);
+  -ms-transform: scale(1.3);
+  transform: scale(1.3);
+}
 
 #question {
   display: flex;
@@ -50,7 +70,7 @@ a:hover {
   flex-wrap: wrap;
   height: 750px;
   width: 750px;
-  background-color: crimson;
+  /* background-color: crimson; */
 }
 
 
