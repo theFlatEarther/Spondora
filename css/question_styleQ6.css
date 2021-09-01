@@ -1,6 +1,6 @@
 body {
   color: white;
-  font-family: sans-serif;
+  font-family: 'raleway', sans-serif;
   /* display: flex; */
   align-items: center;
   justify-content: center; 
@@ -12,6 +12,7 @@ body {
 ul {
   /* background-color: blueviolet; */
   display:flex;
+  font-family: 'raleway', sans-serif;
   align-items: right;
   justify-content:flex-end;
   padding: 25px 0px 25px 0px;
@@ -19,6 +20,7 @@ ul {
 
 #navi {
   padding:0px 10px 0px 10px ;
+  font-family: 'megrim';
 }
 
 #nav{
@@ -72,6 +74,7 @@ img:hover{
   flex-wrap: wrap;
   height: 750px;
   width: 1100px;
+  font-family: 'raleway', sans-serif;
   /* background-color: crimson; */
 }
 
@@ -79,8 +82,10 @@ button {
   background: none;
   color: #ffa260;
   border: 2px solid;
-  padding: 1em 2em;
+  padding: 0.6em 4em;
   transition: all 0.2s;
+  font-family: 'megrim';
+  font-size: large;
 }
 
 button:hover {
