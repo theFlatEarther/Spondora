@@ -6,21 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/question_style.css">
 </head>
 <body>
     <header>
         <div>
-        <img src="" alt="">
+            <img src="../img/LOGO.png">
         </div>
-        <nav>
-            <a href=""></a>
-            <a href=""></a>
-            <a href=""></a>
-        </nav>
+        <div id="nav">
+            <nav>
+                <ul>
+                    <a id="navi" href="">Home</a>
+                    <a id="navi" href="">Playlist</a>
+                    <a id="navi" href="">About Us</a>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
-        <div id="question">
+        <div id="images">
+            <div id="question_ul" class="question">
+                    <div>
+                        <img src="https://place-hold.it/300" id="q3a1" alt="60s">
+                        <p>60s</p>
+                    </div>
+                    <div>
+                        <img src="https://place-hold.it/300" id="q3a2" alt="70s">
+                        <p>70s</p>
+                    </div>
+                    <div> 
+                        <img src="https://place-hold.it/300" id="q3a3" alt="80s">
+                        <p>80s</p>
+                    </div>
+                    <div>
+                        <img src="https://place-hold.it/300" id="q3a4" alt="90s">
+                        <p>90s</p>
+                    </div>
+            </div>
+        </div>
+        <!-- <div id="question">
             <ul id="question_ul">
                 <img src="https://place-hold.it/300" id="q3a1">60s</img>
                 <img src="https://place-hold.it/300" id="q3a2">70s</img>
@@ -28,10 +52,54 @@
                 <img src="https://place-hold.it/300" id="q3a4">90s</img>
                 <img src="https://place-hold.it/300" id="q3a5">2000s</img>
             </ul>
+        </div> -->
+        <div id="button">
+            <a href="../html/question2.html">
+                <button>Submit</button>
+            </a>
         </div>
-        <a href="../html/question4.html"><button id="submit">Submit</button></a>
     </main>
     <footer><p>Spondora</p></footer>
     <script src="../js/app.js"></script>
+    <script>
+        // set image properties, for Highlight effect added when click
+        var imgProp = {
+         'padding': '3px',
+         'backgroundColor': '#eded01',
+         'borderSize': '1ps',
+         'borderStyle': 'dashed',
+         'borderColor': '#0001fe'
+        };
+        
+        // function to highlight IMGs on click - from: https://coursesweb.net/
+        function highlightImg() {
+         // gets all <img> tags, and their number
+         var allimgs = document.getElementsByTagName('img');
+         var nrallimgs = allimgs.length;
+        
+         // traverses the <img> elements, and register onclick to each one
+         // else, apply the properties defined in $imgProp
+         for(i=0; i<nrallimgs; i++) {
+         allimgs[i].onclick=function() {
+         // if borderStyle is already applied, anulates the 'padding', 'background' and 'border' properties
+         if(this.style.borderStyle == imgProp.borderStyle) {
+         this.style.padding = 'auto';
+         this.style.background = 'none';
+         this.style.border = 'none';
+         }
+         else {
+         this.style.padding = imgProp.padding;
+         this.style.backgroundColor = imgProp.backgroundColor;
+         this.style.borderSize = imgProp.borderSize;
+         this.style.borderStyle = imgProp.borderStyle;
+         this.style.borderColor = imgProp.borderColor;
+         }
+         }
+         }
+        }
+        
+        // calls the highlightImg() function to apply the effect
+        highlightImg();
+        </script>
 </body>
 </html>
