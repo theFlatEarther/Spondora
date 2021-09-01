@@ -267,16 +267,7 @@ function _makeElem(tag, parent, text=null, attribute=null, attributeValue=null) 
   return Elem;
 }
 
-function generatePlayList() {
-  const ulEle = document.getElementById('savedLists')
-  ulEle.innerHTML = '';
-  for (let song of Song.recommendedPlayList) {
-    const liEle = document.createElement('li')
-    liEle.textContent = `${song.name} by ${song.artist}. Album ${song.album}.`;
-    console.log()
-    ulEle.appendChild(liEle);
-  }
-}
+
 
 function renderButtonPageOne() {
   let buttonDiv = document.getElementById('button_div');
@@ -575,4 +566,4 @@ questionNumber6[9].push(
 );
 
 getFromLocalStorage();
-generatePlayList();
+// generatePlayList();
