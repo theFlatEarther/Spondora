@@ -569,3 +569,40 @@ questionNumber6[9].push(
 
 getFromLocalStorage();
 // generatePlayList();
+
+let imgProp = {
+  'padding': '3px',
+  'backgroundColor': '#ffa260',
+  'borderSize': '1ps',
+ //  'borderStyle': 'dashed',
+  'borderColor': '#ffa260'
+ };
+ 
+
+ function highlightImg() {
+       
+         let allimgs = document.getElementsByTagName('img');
+         let nrallimgs = allimgs.length;
+         
+        
+         for(let i=0; i<nrallimgs; i++) {
+             allimgs[i].onclick=function() {
+
+             if(this.style.borderStyle == imgProp.borderStyle) {
+             this.style.padding = 'auto';
+             this.style.background = 'none';
+             this.style.border = 'none';
+             }
+             else {
+             this.style.padding = imgProp.padding;
+             this.style.backgroundColor = imgProp.backgroundColor;
+             this.style.borderSize = imgProp.borderSize;
+             this.style.borderStyle = imgProp.borderStyle;
+             this.style.borderColor = imgProp.borderColor;
+             }
+         }
+     }
+ }
+ 
+
+ highlightImg();
