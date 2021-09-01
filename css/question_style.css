@@ -1,6 +1,6 @@
 body {
   color: white;
-  font-family: sans-serif;
+  font-family: 'raleway';
   /* display: flex; */
   align-items: center;
   justify-content: center; 
@@ -25,6 +25,7 @@ ul {
   color: #ffa260;
   transition: all 0.2s;
   font-size: larger;
+  font-family: 'megrim';
 }
 
 #nav{
@@ -86,6 +87,7 @@ img:hover{
   flex-wrap: wrap;
   height: 750px;
   width: 750px;
+  font-family: 'raleway';
   /* background-color: crimson; */
 }
 
@@ -94,8 +96,10 @@ button {
   background: none;
   color: #ffa260;
   border: 2px solid;
-  padding: 1em 2em;
+  padding: 0.6em 4em;
   transition: all 0.2s;
+  font-family: 'megrim';
+  font-size: large;
 }
 
 button:hover {
@@ -126,6 +130,7 @@ button:hover {
   margin: auto;
   height: 750px;
   width: 1600px;
+  font-family: 'raleway';
 }
 
 /* #profileBody{
