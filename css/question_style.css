@@ -99,3 +99,15 @@ button:hover {
 .hide {
   display: none;
 }
+
+#savedLists {
+  /* text-decoration: none; */
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  margin: auto;
+  height: 750px;
+  width: 1600px;
+}
