@@ -51,6 +51,10 @@ a:hover {
 }
 
 img{
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
   transition: all 0.2s;
 }
 
@@ -67,7 +71,7 @@ img:hover{
   flex-direction: row;
   flex-wrap: wrap;
   height: 750px;
-  width: 1600px;
+  width: 1100px;
   /* background-color: crimson; */
 }
 

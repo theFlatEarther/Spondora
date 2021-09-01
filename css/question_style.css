@@ -21,6 +21,10 @@ ul {
 
 #navi {
   padding:0px 10px 0px 10px ;
+  text-decoration: none;
+  color: #ffa260;
+  transition: all 0.2s;
+  font-size: larger;
 }
 
 #nav{
@@ -29,21 +33,29 @@ ul {
   border: 2px solid;
 }
 
-a {
+/* a {
   text-decoration: none;
   color: #ffa260;
   transition: all 0.2s;
   font-size: larger;
-}
+} */
 
 
-a:hover {
+#navi:hover {
   border-color: #f1ff5c;
   color:  #f1ff5c;
   box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
   transform: translateY(-0.25em);
   cursor: pointer;
 }
+
+/* #mainButton.a:hover {
+  border-color: #f1ff5c;
+  color:  #f1ff5c;
+  box-shadow: 0 0.5em 0.5em -0.9em #f1ff5c;
+  transform: translateY(-0.25em);
+  cursor: pointer;
+} */
 
 #images {
   display: flex;
@@ -53,6 +65,10 @@ a:hover {
 }
 
 img{
+  max-width: 300px;
+  max-height: 300px;
+  width: auto;
+  height: auto;
   transition: all 0.2s;
 }
 
@@ -111,3 +127,7 @@ button:hover {
   height: 750px;
   width: 1600px;
 }
+
+/* #profileBody{
+  background-image: url(purple)
+} */
