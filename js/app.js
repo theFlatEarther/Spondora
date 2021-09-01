@@ -4,6 +4,7 @@
 console.log('Flat earth is real - Angela Dzodzomoney')
 console.log('I hate WHITE - David Hecker')
 console.log('1 sec, thats all I need - jo')
+console.log('Whoops - all')
 
 // __________________________________ Global Variables __________________________________ 
 
