@@ -21,13 +21,6 @@ const buttonElem = document.getElementById('submit')
 const newListsElem = document.getElementById('savedLists')
 
 let currentSong = null;
-
-let imgProp = {
-  'padding': '3px',
-  'backgroundColor': '#ffa260',
-  'borderSize': '1ps',
-  'borderColor': '#ffa260'
-};
  
 // __________________________________ Constructor Functions  __________________________________ 
 
@@ -263,7 +256,15 @@ function renderButtonPageSix() {
 }
 
 function highlightImg() {
-
+  
+  let imgProp = {
+    'padding': '10px',
+    'backgroundColor': '#ffa260',
+    'borderSize': '10px',
+    'borderStyle': 'solid',
+    'borderColor': '#ffa260',
+  };
+  
   let allimgs = document.getElementsByTagName('img');
   let nrallimgs = allimgs.length;
         
