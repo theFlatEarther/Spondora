@@ -266,10 +266,11 @@ function renderButtonPageSix() {
 function highlightImg() {
 
   let imgProp = {
-    'padding': '3px',
+    'padding': '10px',
     'backgroundColor': '#ffa260',
-    'borderSize': '1ps',
-    'borderColor': '#ffa260'
+    'borderSize': '10px',
+    'borderStyle': 'solid',
+    'borderColor': '#ffa260',
   };
       
   let allimgs = document.getElementsByTagName('img');
@@ -429,8 +430,6 @@ questionNumber3[0].push(
   new Song ('My Girl', 'The Temptations', 'The Temptations Sing Smokey'),
   new Song ('What\’s New Pussycat?', 'Tom Jones', 'What\’s New Pussycat?'),
   new Song ('My Cherie Amour', 'Stevie Wonder', 'My Cherie Amour'),
-);
-
   new Song ('The Twist', 'Chubby Checker', 'Twist With Chubby Checker'),
   new Song ('Light My Fire', 'The Doors', 'The Doors'),
   new Song ('It\'s Now or Never', 'Elvis Presley With the Jordans', 'Elvis Is Back!'),
@@ -444,8 +443,6 @@ questionNumber3[1].push(
   new Song ('Changes', 'David Bowie', 'Hunky Dory'),
   new Song ('What You Won’t Do For Love', 'Bobby Caldwell', 'Bobby Caldwell'),
   new Song ('Let’s Get It On', 'Marvin Gaye', 'Let\’s Get It On'),
-);
-
   new Song ('Don\'t Stop \'til You Get Enough', 'Michael Jackson', 'Off The Wall'),
   new Song ('We Will Rock You', 'Queen', 'News of the World'),
   new Song ('Move On Up', 'Curtis Mayfield','Curtis'),
@@ -459,8 +456,6 @@ questionNumber3[2].push(
   new Song ('Whip It', 'Devo', 'Freedom Of Choice'),
   new Song ('Never Too Much', 'Luther Vandross', 'Never Too Much'),
   new Song ('Waiting For A Girl Like You', 'Foreigner', '4'),
-);
-
   new Song ('Take Me On', 'a-ha', 'Hunting High and Low'),
   new Song ('Don\'t Stop Believin\'', 'Journey', 'Escape'),
   new Song ('Walk Like an Egyptian', 'The Bangles', 'Different Light'),
@@ -474,8 +469,6 @@ questionNumber3[3].push(
   new Song ('Man in The Box', 'Alice in Chains', 'Facelift'),
   new Song ('Creep', 'TLC', 'Ooooooohhh… On the TLC Tip',),
   new Song ('California Love', 'Tupac Shakur', 'All Eyes on Me',),
-);
-
   new Song ('Smells Like Teen Spirit', 'Nirvana', 'Nevermnind'),
   new Song ('Creep', 'Radiohead', 'Creep'),
   new Song ('I Want It That Way', 'Backstreet Boys', 'Millennium'),
@@ -489,8 +482,6 @@ questionNumber3[4].push(
   new Song ('She Will Be Loved', 'Maroon 5', 'Songs About Jane', ),
   new Song ('Sugar, We’re Going Down', 'Fall Out Boy', 'From Under the Cork Tree', ),
   new Song ('Hott in Herre', 'Nelly', 'Nellyville', ),
-);
-  
   new Song ('Toxic', 'Britney Spears', 'In The Zone'),
   new Song ('Lose Control', 'Missy Elliot', 'The Cookbook'),
   new Song ('Drop It Like It\'s Hot', 'Snoop Dogg', 'R&G (Rhythm & Gangsta): The Masterpiece'),
