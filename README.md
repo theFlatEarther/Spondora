@@ -2,7 +2,7 @@
 
 ReadME~
 
-Group:Angela's theFlatEarthers
+Group:The Flat Four
 
 Project: Spondora
 
