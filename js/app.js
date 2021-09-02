@@ -210,7 +210,7 @@ function _makeElem(tag, parent, text=null, attribute=null, attributeValue=null) 
 function renderButtonPageOne() {
   let buttonDiv = document.getElementById('button_div');
   buttonDiv.innerHTML = '';
-  let aTagElem = _makeElem("a", buttonDiv, null, "href", "./html/question2.html");
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question2.html");
   let newButton = _makeElem('button', aTagElem, 'Submit', 'id', 'submit');
   newButton.addEventListener('click', handleSubmit);
 }
@@ -218,7 +218,7 @@ function renderButtonPageOne() {
 function renderButtonPageTwo() {
   let buttonDiv = document.getElementById("button_div");
   buttonDiv.innerHTML = "";
-  let aTagElem = _makeElem("a", buttonDiv, null, "href", "./html/question3.html");
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question3.html");
   let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
   newButton.addEventListener("click", handleSubmit);
 }
@@ -226,7 +226,7 @@ function renderButtonPageTwo() {
 function renderButtonPageThree() {
   let buttonDiv = document.getElementById("button_div");
   buttonDiv.innerHTML = "";
-  let aTagElem = _makeElem("a", buttonDiv, null, "href", "./html/question4.html");
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question4.html");
   let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
   newButton.addEventListener("click", handleSubmit);
 }
@@ -234,7 +234,7 @@ function renderButtonPageThree() {
 function renderButtonPageFour() {
   let buttonDiv = document.getElementById("button_div");
   buttonDiv.innerHTML = "";
-  let aTagElem = _makeElem("a", buttonDiv, null, "href", "./html/question5.html");
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question5.html");
   let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
   newButton.addEventListener("click", handleSubmit);
 }
@@ -242,7 +242,7 @@ function renderButtonPageFour() {
 function renderButtonPageFive() {
   let buttonDiv = document.getElementById("button_div");
   buttonDiv.innerHTML = "";
-  let aTagElem = _makeElem("a", buttonDiv, null, "href", "./html/question6.html");
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question6.html");
   let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
   newButton.addEventListener("click", handleSubmit);
 }
@@ -250,7 +250,7 @@ function renderButtonPageFive() {
 function renderButtonPageSix() {
   let buttonDiv = document.getElementById("button_div");
   buttonDiv.innerHTML = "";
-  let aTagElem = _makeElem("a", buttonDiv, null, "href", "./html/profile.html");
+  let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/profile.html");
   let newButton = _makeElem("button", aTagElem, "Submit", "id", "submit");
   newButton.addEventListener("click", handleSubmit);
 }
