@@ -355,6 +355,11 @@ questionNumber1[0].push(
     new Song ('Dreams', 'Fleetwood Mac', 'Rumours'),
     new Song ('Easy', 'Commodores', 'Commodores'),
     new Song ('Here Comes the Sun', 'The Beatles', 'Abbey Road'),
+    new Song ('Your Love', 'The Outfield', 'Super Hits'),
+    new Song ('Panama', 'Van Halen', '1984'),
+    new Song ('Running on Empty', 'Jackson Browne', 'Running on Empty'),
+    new Song ('Take It On the Run', 'REO Speedwagon', 'Hi Infidelity'),
+    new Song ('Oh Sherrie', 'Steve Perry', 'Street Talk'),
 ),
 //Camping
 questionNumber1[1].push(
@@ -363,6 +368,11 @@ questionNumber1[1].push(
     new Song ('Rhiannon', 'Fleetwood Mac', 'Life Becoming a Landslide'),
     new Song ('Badmoon Rising', 'Creedence Clearwater Revival', 'Green River'),
     new Song ("You've Got a Friend In Me", 'Randy Newman', 'Toy Story'),
+    new Song ("Tiny Dancer", 'Elton John', 'Madman Across The Water'),
+    new Song ("Have You Ever Seen The Rain", 'Creedance Clearwater Revival', 'Pendulum'),
+    new Song ("Maggie May", 'Rod Stewart', 'Every Picture Tells A Story'),
+    new Song ("Rock'n Me", 'Steve Miller Band', 'Fly Like An Eagle'),
+    new Song ("Take It Easy", 'Eagles', 'Eagles'),
 ),
 //Studying
 questionNumber1[2].push(
@@ -371,13 +381,23 @@ questionNumber1[2].push(
   new Song ('Jazzy Afternoon', 'LoFi Waiter', 'A Night In Tokyo'),
   new Song ('Affection', 'Jinsang', 'Life'),
   new Song ('Aruarian dance', 'Nujabes', 'Samurai Champloo Music Record: Departure'),
+  new Song ('Le Jardin de Monsieur Monet', 'Stephan Moccio', 'Le Jardin de Monsieur Monet'),
+  new Song ('A Recurring Theme', 'Cyril Mathews', 'A Recurring Theme'),
+  new Song ('Bubbles', 'Michel Jean', 'Bubbles'),
+  new Song ('Seine', 'Rosa Leoni', 'Moonray'),
+  new Song ('Nordic Dream', 'Anders Linros', 'Nordic Dream'),
 ),
 //Party
 questionNumber1[3].push(
   new Song ('We Found Love', 'Rihanna and Calvin Harris', 'Talk That Talk'),//4 again lol
-  new Song ('I Gotta Feeling', 'Black Eyed Peas', 'The E.N.D.',),
-  new Song ('Bad Romance', 'Lady Gaga', 'The Fame Monster',),
-  new Song ("We Can't Stop", 'Miley Cyrus', 'Bangerz',),
+  new Song ('I Gotta Feeling', 'Black Eyed Peas', 'The E.N.D.'),
+  new Song ('Bad Romance', 'Lady Gaga', 'The Fame Monster'),
+  new Song ("We Can't Stop", 'Miley Cyrus', 'Bangerz'),
+  new Song ("Despacito", 'Luis Fonsi, Daddy Yankee', 'Despacito'),
+  new Song ("Uptown Funk", 'Bruno Mars', 'Uptown Special'),
+  new Song ("Dynamite", 'BTS', 'Dynamite'),
+  new Song ("Dance Monkey", 'Tones And I', 'Dance Monkey'),
+  new Song ("Sugar", 'Maroon 5', 'V'),
 ),
 // question 2
 //Cali
@@ -387,6 +407,11 @@ questionNumber2[0].push(
   new Song ('Santeria', 'Sublime', 'Gold'),
   new Song ('Semi-Charmed Life', 'Third Eye Blind', 'Third Eye Blind'),
   new Song ('Fly', 'Sugar Ray', 'Floored'),
+  new Song ('California', 'Tchad Blake Mix', 'The Guest'),
+  new Song ('River', 'Leon Bridges', 'Coming Home'),
+  new Song ('Hold On', 'Alabama Shakes', 'Boys & Girls'),
+  new Song ('Champagne Supernova', 'Oasis', 'Morning Glory'),
+  new Song ('When You Were Young', 'The Killers', 'Hot Fuss'),
 )
 //Texas
 questionNumber2[1].push(
@@ -394,6 +419,11 @@ questionNumber2[1].push(
   new Song ('No Vacancy', 'Treaty Oak Revival', 'No Vacancy'),
   new Song ('Ride the Lightning', 'Warren Zeiders', 'Ride the Lightning'),
   new Song ('Teasure', 'Laci Kaye Booth', 'Laci Kaye Booth'),
+  new Song ('Smile', 'ScarFace, Johnny P, 2Pac', 'Greatest Hits'),
+  new Song ('Damn It Feels Good to Be a Gangsta', 'Geto Boys', 'Uncut Dope'),
+  new Song ('Turn It Up', 'Chamillionaire, Lil Flip', 'The Sound of Revenge'),
+  new Song ('Pocket Full of Stones', 'UGK', 'Best of UGK'),
+  new Song ('Back Then', 'Mike Jones', 'Who Is Mike Jones?'),
 )
 //Illinois
 questionNumber2[2].push(
@@ -402,14 +432,24 @@ questionNumber2[2].push(
   new Song ('All Night Longer', 'Sammy Adams', 'All Night Longer'),
   new Song ('Sorority Girl', 'Luke Brian', 'Spring Break... Here to Party'),
   new Song ('Doeses and Mimosas', 'Cherub', 'Year of the Caprese'),
+  new Song ('What a Fool Believes', 'The Doobie Brothers', 'Minute By Minute'),
+  new Song ('What You Thought You Need', 'Jack Johnson', 'Sleep Through The Static'),
+  new Song ('Breathe', 'Pink FLoyd', 'The Dark Side of the Moon'),
+  new Song ('Wake Me', 'Watchhouse', 'Haste Make/ Hard Hearted Stranger'),
+  new Song ('Glimmer', 'Mako Road', 'The Green Superintendent'),
 )
 //New York
 questionNumber2[3].push(
-  new Song ('Dead Presidents II', 'JAY-Z', 'Reasonable Doubt',),
-  new Song ('I Need a Girl Part II', 'Diddy', ' The Saga Continues',),
-  new Song ('Big Poppa', 'The Notorious B.I.G.', 'Ready to Die',),
-  new Song ('So Far Away', 'Carole King', 'In Concer',),
-  new Song ('If I Ain\'t Got You', 'Alicia Keys', 'The Diary of Alicia Keys',),
+  new Song ('Dead Presidents II', 'JAY-Z', 'Reasonable Doubt'),
+  new Song ('I Need a Girl Part II', 'Diddy', ' The Saga Continues'),
+  new Song ('Big Poppa', 'The Notorious B.I.G.', 'Ready to Die'),
+  new Song ('So Far Away', 'Carole King', 'In Concer'),
+  new Song ('If I Ain\'t Got You', 'Alicia Keys', 'The Diary of Alicia Keys'),
+  new Song ('Empire State Of Mind', 'Alicia Keys', 'The Blueprint 3'),
+  new Song ('No Sleep Till Brooklyn', 'Beastie Boys', 'License To Ill'),
+  new Song ('Welcome To New York', 'Taylor Swift', '1989'),
+  new Song ('Back To Manhattan', 'Norah Jones', 'The Fall'),
+  new Song ('I Love New York', 'Madonna', 'Confessions on a Dance Floor'),
 )
 // question 3
 //60's music
