@@ -1,11 +1,5 @@
 'use strict';
 
-// let the console know about Angela's core belief system
-console.log('Flat earth is real - Angela Dzodzomoney')
-console.log('I hate WHITE - David Hecker')
-console.log('1 sec, thats all I need - jo')
-console.log('Whoops - all')
-
 // __________________________________ Global Variables __________________________________ 
 
 // arrays of songs by question number
@@ -37,11 +31,9 @@ let imgProp = {
   'padding': '3px',
   'backgroundColor': '#ffa260',
   'borderSize': '1ps',
- //  'borderStyle': 'dashed',
   'borderColor': '#ffa260'
 };
  
-
 // __________________________________ Constructor Functions  __________________________________ 
 
 // create a song object, accept name, artist, album, and optional img artwork
@@ -50,11 +42,6 @@ function Song(name, artist, album, id) {
   this.artist = artist;
   this.album = album;
 }
-
-//render playlist
-//hide the buttons
-//enter name
-
 
 // __________________________________ Prototype Methods __________________________________ 
 
@@ -68,22 +55,18 @@ function randomArrayItem(array) {
 
 function q1HandleClick() {
 
-  switch(event.target.id){
+  switch(event.target.id) {
     case 'q1a1':
       currentSong = randomArrayItem(questionNumber1[0]);
-      console.log(currentSong)
       break;
     case 'q1a2':
       currentSong = randomArrayItem(questionNumber1[1]);
-      console.log(currentSong)
       break;
     case 'q1a3':
       currentSong = randomArrayItem(questionNumber1[2]);
-      console.log(currentSong)
       break;
     case 'q1a4':
       currentSong = randomArrayItem(questionNumber1[3]);
-      console.log(currentSong)
       break;
   }
   renderButtonPageOne();
@@ -91,48 +74,40 @@ function q1HandleClick() {
 
 function q2HandleClick() {
   
-  switch(event.target.id){
+  switch(event.target.id) {
     case 'q2a1':
       currentSong = randomArrayItem(questionNumber2[0]);
-      console.log(currentSong)
       break;
     case 'q2a2':
-      currentSong = randomArrayItem(questionNumber2[1])
-      console.log(currentSong)
+      currentSong = randomArrayItem(questionNumber2[1]);
       break;
     case 'q2a3':
-      currentSong = randomArrayItem(questionNumber2[2])
-      console.log(currentSong)
+      currentSong = randomArrayItem(questionNumber2[2]);
       break;
     case 'q2a4':
-      currentSong = randomArrayItem(questionNumber2[3])
-      console.log(currentSong)
+      currentSong = randomArrayItem(questionNumber2[3]);
       break;
   }
   renderButtonPageTwo();
 }
+
 function q3HandleClick() {
   
-  switch(event.target.id){
+  switch(event.target.id) {
     case 'q3a1':
-      currentSong = randomArrayItem(questionNumber3[0])
-      console.log(currentSong)
+      currentSong = randomArrayItem(questionNumber3[0]);
       break;
     case 'q3a2':
-      currentSong = randomArrayItem(questionNumber3[1])
-      console.log(currentSong)
+      currentSong = randomArrayItem(questionNumber3[1]);
       break;
     case 'q3a3':
-      currentSong = randomArrayItem(questionNumber3[2])
-      console.log(currentSong)
+      currentSong = randomArrayItem(questionNumber3[2]);
       break;
     case 'q3a4':
-      currentSong = randomArrayItem(questionNumber3[3])
-      console.log(currentSong)
+      currentSong = randomArrayItem(questionNumber3[3]);
       break;
     case 'q3a5':
-      currentSong = randomArrayItem(questionNumber3[3])
-      console.log(currentSong)
+      currentSong = randomArrayItem(questionNumber3[3]);
       break;
   }
   renderButtonPageThree();
@@ -141,103 +116,83 @@ function q3HandleClick() {
 // question 4 handler
 
 function q4HandleClick() {
-  console.log(event.target.id)
+
   switch (event.target.id) {
     case 'q4a1':
       currentSong = randomArrayItem(questionNumber4[0]);
-      console.log("added " + event.target.id);
       break;
     case 'q4a2':
       currentSong = randomArrayItem(questionNumber4[1]);
-      console.log("added " + event.target.id);
       break;
     case 'q4a3':
       currentSong = randomArrayItem(questionNumber4[2]);
-      console.log("added " + event.target.id);
       break;
   }
-  console.log(currentSong)
   renderButtonPageFour();
 }
 
-
 // question 5 handler
 function q5HandleClick() {
-  console.log(event.target.id)
+
   switch(event.target.id) {
+
     case 'q5a1':
-      currentSong = randomArrayItem(questionNumber5[0])
-      console.log('added '+ event.target.id);
+      currentSong = randomArrayItem(questionNumber5[0]);
       break;
     case 'q5a2':
       currentSong = randomArrayItem(questionNumber5[1]);
-      console.log("added " + event.target.id);
       break;
     case 'q5a3':
       currentSong = randomArrayItem(questionNumber5[2]);
-      console.log("added " + event.target.id);
       break;
     case 'q5a4':
       currentSong = randomArrayItem(questionNumber5[3]);
-      console.log("added " + event.target.id);
       break;
-    }
-    console.log("current song is" + currentSong)
+  }
     renderButtonPageFive();
 }
 
 // question 6 handler
 function q6HandleClick() {
-  // debugger;
+
   switch(event.target.id) {
     case 'q6a1':
-      currentSong = randomArrayItem(questionNumber6[0])
-      console.log("case 1 current song is" + currentSong)
+      currentSong = randomArrayItem(questionNumber6[0]);
       break;
     case 'q6a2':
       currentSong = randomArrayItem(questionNumber6[1]);
-      console.log("case 2 current song is" + currentSong);
       break;
     case 'q6a3':
       currentSong = randomArrayItem(questionNumber6[2]);
-      console.log("case 3 current song is" + currentSong);
       break;
     case 'q6a4':
       currentSong = randomArrayItem(questionNumber6[3]);
-      console.log("case 4 current song is" + currentSong);
       break;
     case 'q6a5':
       currentSong = randomArrayItem(questionNumber6[4]);
-      console.log("case 5 current song is" + currentSong);
       break;
     case 'q6a6':
       currentSong = randomArrayItem(questionNumber6[5]);
-      console.log("case 6 current song is" + currentSong);
       break;
     case 'q6a7':
       currentSong = randomArrayItem(questionNumber6[6]);
-      console.log("case 7 current song is" + currentSong);
       break;
     case 'q6a8':
       currentSong = randomArrayItem(questionNumber6[7]);
-      console.log("case 8 current song is" + currentSong);
       break;
     case 'q6a9':
       currentSong = randomArrayItem(questionNumber6[8]);
-      console.log("case 9 current song is" + currentSong);
       break;
     case 'q6a10':
       currentSong = randomArrayItem(questionNumber6[9]);
-      console.log("case 10 current song is" + currentSong);
       break;      
   }
   renderButtonPageSix();
 }
-function handleSubmit(){
-  // console.log('it works!')
+
+function handleSubmit() {
   Song.recommendedPlayList.push(currentSong)
   addToLocalStorage();
-  // console.log(recommendedPlayList)
 }
 
 function addToLocalStorage() {
@@ -247,17 +202,13 @@ function addToLocalStorage() {
 
 function getFromLocalStorage() {
   const fromStorage = localStorage.getItem('playlist')
-    console.log(fromStorage)
+
   if (fromStorage !== null) {
     const normalizedArray = JSON.parse(fromStorage)
-    console.log( "normalized array is ")
-    console.log(normalizedArray)
+
     for (let song of normalizedArray) {
-      console.log(song)
       let tempSong = new Song(song.name, song.artist, song.album)
       Song.recommendedPlayList.push(tempSong)
-      console.log('rec playlist is')
-      console.log(Song.recommendedPlayList)
     }
   }
 }
@@ -276,13 +227,11 @@ function _makeElem(tag, parent, text=null, attribute=null, attributeValue=null) 
   return Elem;
 }
 
-
-
 function renderButtonPageOne() {
   let buttonDiv = document.getElementById('button_div');
   buttonDiv.innerHTML = '';
   let aTagElem = _makeElem("a", buttonDiv, null, "href", "../html/question2.html");
-  let newButton = _makeElem('button', aTagElem, 'Submit', 'id', 'submit')
+  let newButton = _makeElem('button', aTagElem, 'Submit', 'id', 'submit');
   newButton.addEventListener('click', handleSubmit);
 }
 
@@ -390,7 +339,7 @@ questionNumber1[0].push(
     new Song ('Running on Empty', 'Jackson Browne', 'Running on Empty'),
     new Song ('Take It On the Run', 'REO Speedwagon', 'Hi Infidelity'),
     new Song ('Oh Sherrie', 'Steve Perry', 'Street Talk'),
-),
+);
 //Camping
 questionNumber1[1].push(
     new Song ('Take me home, Country Roads', 'John Denver', 'Poems, Prayers & Promises'),
@@ -403,7 +352,7 @@ questionNumber1[1].push(
     new Song ("Maggie May", 'Rod Stewart', 'Every Picture Tells A Story'),
     new Song ("Rock'n Me", 'Steve Miller Band', 'Fly Like An Eagle'),
     new Song ("Take It Easy", 'Eagles', 'Eagles'),
-),
+);
 //Studying
 questionNumber1[2].push(
   new Song ('Controlla', 'Idealism', 'Rainy Evening'),
@@ -416,7 +365,7 @@ questionNumber1[2].push(
   new Song ('Bubbles', 'Michel Jean', 'Bubbles'),
   new Song ('Seine', 'Rosa Leoni', 'Moonray'),
   new Song ('Nordic Dream', 'Anders Linros', 'Nordic Dream'),
-),
+);
 //Party
 questionNumber1[3].push(
   new Song ('We Found Love', 'Rihanna and Calvin Harris', 'Talk That Talk'),//4 again lol
@@ -428,7 +377,7 @@ questionNumber1[3].push(
   new Song ("Dynamite", 'BTS', 'Dynamite'),
   new Song ("Dance Monkey", 'Tones And I', 'Dance Monkey'),
   new Song ("Sugar", 'Maroon 5', 'V'),
-),
+);
 // question 2
 //Cali
 questionNumber2[0].push(
@@ -442,7 +391,7 @@ questionNumber2[0].push(
   new Song ('Hold On', 'Alabama Shakes', 'Boys & Girls'),
   new Song ('Champagne Supernova', 'Oasis', 'Morning Glory'),
   new Song ('When You Were Young', 'The Killers', 'Hot Fuss'),
-)
+);
 //Texas
 questionNumber2[1].push(
   new Song ('Rest of My Life', 'Parker McCollum', 'Rest of My Life'),
@@ -454,7 +403,7 @@ questionNumber2[1].push(
   new Song ('Turn It Up', 'Chamillionaire, Lil Flip', 'The Sound of Revenge'),
   new Song ('Pocket Full of Stones', 'UGK', 'Best of UGK'),
   new Song ('Back Then', 'Mike Jones', 'Who Is Mike Jones?'),
-)
+);
 //Illinois
 questionNumber2[2].push(
   new Song ('Hell in a Handbag', 'Alyssa Micaela', 'Hell in a Handbag'),
@@ -467,7 +416,7 @@ questionNumber2[2].push(
   new Song ('Breathe', 'Pink FLoyd', 'The Dark Side of the Moon'),
   new Song ('Wake Me', 'Watchhouse', 'Haste Make/ Hard Hearted Stranger'),
   new Song ('Glimmer', 'Mako Road', 'The Green Superintendent'),
-)
+);
 //New York
 questionNumber2[3].push(
   new Song ('Dead Presidents II', 'JAY-Z', 'Reasonable Doubt'),
@@ -480,7 +429,7 @@ questionNumber2[3].push(
   new Song ('Welcome To New York', 'Taylor Swift', '1989'),
   new Song ('Back To Manhattan', 'Norah Jones', 'The Fall'),
   new Song ('I Love New York', 'Madonna', 'Confessions on a Dance Floor'),
-)
+);
 // question 3
 //60's music
 questionNumber3[0].push(
@@ -489,7 +438,7 @@ questionNumber3[0].push(
   new Song ('My Girl', 'The Temptations', 'The Temptations Sing Smokey'),
   new Song ('What\’s New Pussycat?', 'Tom Jones', 'What\’s New Pussycat?'),
   new Song ('My Cherie Amour', 'Stevie Wonder', 'My Cherie Amour'),
-)
+);
 //70's music
 questionNumber3[1].push(
   new Song ('Dreams', 'Fleetwood Mac', 'Rumours'),
@@ -497,7 +446,7 @@ questionNumber3[1].push(
   new Song ('Changes', 'David Bowie', 'Hunky Dory'),
   new Song ('What You Won’t Do For Love', 'Bobby Caldwell', 'Bobby Caldwell'),
   new Song ('Let’s Get It On', 'Marvin Gaye', 'Let\’s Get It On'),
-)
+);
 //80's music
 questionNumber3[2].push(
   new Song ('Celebration', 'Kool & The Gang', 'Celebrate!'),
@@ -505,7 +454,7 @@ questionNumber3[2].push(
   new Song ('Whip It', 'Devo', 'Freedom Of Choice'),
   new Song ('Never Too Much', 'Luther Vandross', 'Never Too Much'),
   new Song ('Waiting For A Girl Like You', 'Foreigner', '4'),
-)
+);
 //90's music
 questionNumber3[3].push(
   new Song ('Wannabe', 'Spice Girls', 'Spice',),
@@ -513,7 +462,7 @@ questionNumber3[3].push(
   new Song ('Man in The Box', 'Alice in Chains', 'Facelift'),
   new Song ('Creep', 'TLC', 'Ooooooohhh… On the TLC Tip',),
   new Song ('California Love', 'Tupac Shakur', 'All Eyes on Me',),
-)
+);
 //00's music
 questionNumber3[4].push(
   new Song ('In Da Club', '50 Cent', 'Get Rich or Die Tryin’',),
@@ -521,7 +470,7 @@ questionNumber3[4].push(
   new Song ('She Will Be Loved', 'Maroon 5', 'Songs About Jane', ),
   new Song ('Sugar, We’re Going Down', 'Fall Out Boy', 'From Under the Cork Tree', ),
   new Song ('Hott in Herre', 'Nelly', 'Nellyville', ),
-)
+);
 // question 4
 //Fall/Winter
 questionNumber4[0].push(
