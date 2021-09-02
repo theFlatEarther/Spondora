@@ -33,7 +33,14 @@ const newListsElem = document.getElementById('savedLists')
 
 let currentSong = null;
 
-
+let imgProp = {
+  'padding': '3px',
+  'backgroundColor': '#ffa260',
+  'borderSize': '1ps',
+ //  'borderStyle': 'dashed',
+  'borderColor': '#ffa260'
+};
+ 
 
 // __________________________________ Constructor Functions  __________________________________ 
 
@@ -319,6 +326,29 @@ function renderButtonPageSix() {
   newButton.addEventListener("click", handleSubmit);
 }
 
+function highlightImg() {
+      
+  let allimgs = document.getElementsByTagName('img');
+  let nrallimgs = allimgs.length;
+        
+  for( let i = 0; i < nrallimgs; i++ ) {
+
+    allimgs[i].onclick=function() {
+
+      if ( this.style.borderStyle == imgProp.borderStyle ) {
+        this.style.padding = 'auto';
+        this.style.background = 'none';
+        this.style.border = 'none';
+      } else {
+        this.style.padding = imgProp.padding;
+        this.style.backgroundColor = imgProp.backgroundColor;
+        this.style.borderSize = imgProp.borderSize;
+        this.style.borderStyle = imgProp.borderStyle;
+        this.style.borderColor = imgProp.borderColor;
+      }
+    }
+  }
+}
 // __________________________________ Event Listeners  __________________________________ 
 
 if(question1Elem) {
@@ -525,39 +555,87 @@ questionNumber6[1].push(
   new Song("Dreaming of the Crash", "Hans Zimmer", "Interstellar")
 );
 questionNumber6[2].push(
-  new Song("You’re the One That I Want", 'John Travolta, Olivia Newton-John', 'Grease'),
-  new Song("Hopelessly Devoted to You", "John Travolta, Olivia Newton-John", "Grease")
+  new Song(
+    "You’re the One That I Want",
+    "John Travolta, Olivia Newton-John",
+    "Grease"
+  ),
+  new Song(
+    "Hopelessly Devoted to You",
+    "John Travolta, Olivia Newton-John",
+    "Grease"
+  ),
+  new Song(
+    "Summer Nights",
+    "John Travolta, Olivia Newton-John",
+    "Grease"
+  )
 );
 questionNumber6[3].push(
-  new Song("Lose Yourself", "eminem", "8 Mile"),
-  new Song("8 Mile", "eminem", "8 Mile"),
-  new Song("Rap Game", "D12", "8 Mile")
+  new Song("Lose Yourself", "Eminem", "8 Mile"),
+  new Song("8 Mile", "Eminem", "8 Mile"),
+  new Song("Rap Game", "D12", "8 Mile"),
+  new Song("Wanksta", "50 Cent", "8 Mile"),
+  new Song("Rabbit Run", "Eminem", "8 Mile")
 );
 questionNumber6[4].push(
-  new Song("You’ll be in my Heart", 'Phil Collins', 'Tarzan'),
-  new Song("Two Worlds", "Phil Collins", "Tarzan")
+  new Song("You’ll be in my Heart", "Phil Collins", "Tarzan"),
+  new Song("Two Worlds", "Phil Collins", "Tarzan"),
+  new Song("Strangers Like Me", "Phil Collins", "Tarzan"),
 );
 questionNumber6[5].push(
-  new Song('Edge of Seventeen', 'Stevie Nicks', 'School of Rock'),
-  new Song("Iron Man", "Black Sabbath", "School of Rock")
+  new Song("Edge of Seventeen", "Stevie Nicks", "School of Rock"),
+  new Song("Iron Man", "Black Sabbath", "School of Rock"),
+  new Song("Back in Black", "AC/DC", "School of Rock"),
+  new Song("Highway to Hell", "AC/DC", "School of Rock"),
+  new Song("Touch Me", "The Doors", "School of Rock")
 );
 questionNumber6[6].push(
   new Song("You Never Can Tell", "Chuck Berry", "Pulp Fiction"),
   new Song("Dancing Queen", "ABBA", "Pulp Fiction"),
   new Song("Satisfied Mind", "Johnny Cash", "Pulp Fiction"),
-  new Song("You Never Can Tell", "Chuck Berry", "Pulp Fiction")
+  new Song("You Never Can Tell", "Chuck Berry", "Pulp Fiction"),
+  new Song("For What it's Worth", "Buffalo Springfield", "Pulp Fiction"),
+  new Song("California Dreamin'", "The Mamas & The Papas", "Pulp Fiction"),
 );
 questionNumber6[7].push(
-  new Song('Mr. Blue Sky', 'Electric Light Orchestra', 'Guardians of the Galaxy'),
-  new Song("Lake Shore Drive", "Aliotta Haynes Jeremiah", "Guardians of the Galaxy"),
+  new Song(
+    "Mr. Blue Sky",
+    "Electric Light Orchestra",
+    "Guardians of the Galaxy"
+  ),
+  new Song(
+    "Lake Shore Drive",
+    "Aliotta Haynes Jeremiah",
+    "Guardians of the Galaxy"
+  ),
   new Song("The Chain", "Fleetwood Mac", "Guardians of the Galaxy"),
   new Song("Fox on the Run", "Sweet", "Guardians of the Galaxy"),
   new Song("Cherry Bomb", "The Runaways", "Guardians of the Galaxy"),
-  new Song("Ain't No Mountain High Enough", "Marvin Gaye, Tammi Terrel", "Guardians of the Galaxy"),
+  new Song(
+    "Ain't No Mountain High Enough",
+    "Marvin Gaye, Tammi Terrel",
+    "Guardians of the Galaxy"
+  ),
+  new Song(
+    "Come a Little Bit Closer",
+    "Jay & The Americans",
+    "Guardians of the Galaxy"
+  ),
+  new Song("Wham Bam Shang-A-Lang", "Silver", "Guardians of the Galaxy"),
+  new Song("Flash Light", "Parliament", "Guardians of the Galaxy"),
+  new Song(
+    "Hooked on a Feeling",
+    "Blue Swede, Bjorn Skifs",
+    "Guardians of the Galaxy"
+  ),
+  new Song("O-o-h Child", "The Five Stairsteps", "Guardians of the Galaxy"),
 );
 questionNumber6[8].push(
-  new Song("Don’t You (Forget About Me)", 'Simple Minds', 'The Breakfast Club'),
-  new Song("We Are Not Alone", 'Karla Devito', 'The Breakfast Club')
+  new Song("Don’t You (Forget About Me)", "Simple Minds", "The Breakfast Club"),
+  new Song("We Are Not Alone", "Karla Devito", "The Breakfast Club"),
+  new Song("Fire in the Twilight", "Wang Chung", "The Breakfast Club"),
+  new Song("Waiting", "E.G. Daily", "The Breakfast Club")
 );
 questionNumber6[9].push(
   new Song('Shallow', 'Lady Gaga, Bradley Cooper', 'A Star is Born'),
@@ -568,41 +646,4 @@ questionNumber6[9].push(
 );
 
 getFromLocalStorage();
-// generatePlayList();
-
-let imgProp = {
-  'padding': '3px',
-  'backgroundColor': '#ffa260',
-  'borderSize': '1ps',
- //  'borderStyle': 'dashed',
-  'borderColor': '#ffa260'
- };
- 
-
- function highlightImg() {
-       
-         let allimgs = document.getElementsByTagName('img');
-         let nrallimgs = allimgs.length;
-         
-        
-         for(let i=0; i<nrallimgs; i++) {
-             allimgs[i].onclick=function() {
-
-             if(this.style.borderStyle == imgProp.borderStyle) {
-             this.style.padding = 'auto';
-             this.style.background = 'none';
-             this.style.border = 'none';
-             }
-             else {
-             this.style.padding = imgProp.padding;
-             this.style.backgroundColor = imgProp.backgroundColor;
-             this.style.borderSize = imgProp.borderSize;
-             this.style.borderStyle = imgProp.borderStyle;
-             this.style.borderColor = imgProp.borderColor;
-             }
-         }
-     }
- }
- 
-
- highlightImg();
+highlightImg();
