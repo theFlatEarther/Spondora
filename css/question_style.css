@@ -123,6 +123,23 @@ button:hover {
 
 #pad {
   padding-top: 25px;
+  background-color: #ffa260;
+  opacity: 0.8;
+  border-radius: 10px;
+  width: 1000px;
+  margin: auto;
+}
+
+li{
+  transition: all 0.2s;
+}
+
+li:hover {
+  border-color: #f1ff5c;
+  color:  #f1ff5c;
+  box-shadow: 0 0.5em 0.5em -0.4em #f1ff5c;
+  transform: translateY(-0.25em);
+  cursor: pointer;
 }
 
 ::-webkit-scrollbar {
@@ -174,4 +191,5 @@ footer hr {
   align-items: center;
   justify-content: center;
   padding-top: 50px;
+  font-size: 50px;
 }
