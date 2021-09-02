@@ -17,18 +17,10 @@ const question3Elem = document.getElementById('question3');
 const question4Elem = document.getElementById('question4');
 const question5Elem = document.getElementById('question5');
 const question6Elem = document.getElementById("question6");
-// const ulQuestionElem = document.getElementById('question_ul')
 const buttonElem = document.getElementById('submit')
 const newListsElem = document.getElementById('savedLists')
 
 let currentSong = null;
-
-let imgProp = {
-  'padding': '3px',
-  'backgroundColor': '#ffa260',
-  'borderSize': '1ps',
-  'borderColor': '#ffa260'
-};
  
 // __________________________________ Constructor Functions  __________________________________ 
 
@@ -264,7 +256,7 @@ function renderButtonPageSix() {
 }
 
 function highlightImg() {
-
+  
   let imgProp = {
     'padding': '10px',
     'backgroundColor': '#ffa260',
@@ -272,7 +264,7 @@ function highlightImg() {
     'borderStyle': 'solid',
     'borderColor': '#ffa260',
   };
-      
+  
   let allimgs = document.getElementsByTagName('img');
   let nrallimgs = allimgs.length;
         
