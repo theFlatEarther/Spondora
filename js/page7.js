@@ -4,7 +4,7 @@ function generatePlayList() {
     ulEle.innerHTML = '';
     for (let song of Song.recommendedPlayList) {
       const liEle = document.createElement('li')
-      liEle.textContent = `${song.name} by ${song.artist}. Album ${song.album}.`;
+      liEle.textContent = `${song.name} by ${song.artist}. Album: ${song.album}.`;
       console.log()
       ulEle.appendChild(liEle);
     }

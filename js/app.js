@@ -480,11 +480,16 @@ questionNumber4[2].push(
 // question 5
 //Facebook
 questionNumber5[0].push(
-  new Song ('STAY', 'The Kid LAROI & Justin Bieber', 'F*CK LOVE 3: OVER YOU'),
-  new Song ('Low', 'Flo Rida & T-Pain', 'Mail on Sunday'),
-  new Song ('Because You Move Me', 'Tinlicker & Helsloot', 'Because You Move '),
-  new Song ('One Dance', 'Drake', 'single'),
+  new Song ('STAY', 'The Kid LAROI, Justin Bieber', 'F*CK LOVE 3: OVER YOU'),
+  new Song ('Low', 'Flo Rida, T-Pain', 'Mail on Sunday'),
+  new Song ('Because You Move Me', 'Tinlicker, Helsloot', 'Because You Move'),
+  new Song ('One Dance', 'Drake', 'One Dance'),
   new Song ('Bad Guy','Billie Eilish', 'When We All Fall Asleep, Where Do We Go'),
+  new Song ('Despacito', 'Luis Fonsi, Daddy Yankee', 'F*CK LOVE 3: OVER YOU'),
+  new Song ('See You Again', 'Wiz Khalifa, Charlie Puth', 'See You Again'),
+  new Song ('Uptown Funk', 'Mark Ronson, Bruno Mars', 'Uptown Special'),
+  new Song ('Gangnam Style', 'PSY', 'Gangnam Style'),
+  new Song ('Roar','Katy Perry', 'Prism'),
 );
 
 //Instagram
@@ -494,14 +499,25 @@ questionNumber5[1].push(
   new Song ('Crazy In Love', 'Beyonce & Jay-Z','Dangerously In LoveDrake'),
   new Song ('Wants and Needs','Drake & Lil Baby','Scary Hours 2'),
   new Song ('Fireworks','ATEEZ','ZERO: FEVER Part.2Fac'),
+  new Song ('GIRL', 'Marren Morris', 'Girl'),
+  new Song ('Love Me Like You Do', 'Ellie Goulding', 'Delirium'),
+  new Song ('Earned It', 'The Weeknd', 'Beauty Behind The Madness'),
+  new Song ('Need To Know', 'Doja Cat', 'Planet Her'),
+  new Song ('Invincible','Pop Smoke', 'Meet The Woo 2'),
 );
+
 //Twitter
 questionNumber5[2].push(
   new Song ('Jail','Kanye West','Donda'),
-  new Song ('INDUSTRY BABY','Lil Nax X & Jack Harlow','INDUSTRY BABY & Jack Harlows'),
+  new Song ('INDUSTRY BABY','Lil Nax X, Jack Harlow','INDUSTRY BABY & Jack Harlows'),
   new Song ('Bad Habits','Ed Sheeran','Bad Habits'),
   new Song ('Pepas','Farruko','Pepas'),
   new Song ('good 4 u','Olivia Rodrigo','SOUR'),
+  new Song ('Montero', 'Lil Nas X', 'Montero(Call Me By Your Name)'),
+  new Song ('Astronaut In The Ocean', 'Masked Wolf', 'Astronaut In The Ocean'),
+  new Song ('Back In Blood', 'Pooh Shiesty, Lil Durk', 'Back In Blood'),
+  new Song ('Drivers License', 'Olivia Rodrigo', 'Sour'),
+  new Song ('Up','Cardi B', 'Up'),
 );
 //Myspace
 questionNumber5[3].push(
@@ -510,6 +526,11 @@ questionNumber5[3].push(
   new Song ('One Week','Barenaked Ladies','Stunt'),
   new Song ('Misery Business','Paramore','Riot'),
   new Song ('Facedown','The Red Jumpsuit Apparatus','Don\'t You Fake It'),
+  new Song ('All the Small Things', 'blink-182', 'Enema of the State'),
+  new Song ('Ocean Avenue', 'Yellow Card', 'Ocean Avenue'),
+  new Song ('Teenagers', 'My Chemical Romance', 'The Black Parade'),
+  new Song ('Swing Swing', 'The All-American Rejects', 'The All-American Rejects'),
+  new Song ('In the End','Linkin Park', 'Hybrid Theory'),
 );
 // question 6
 questionNumber6[0].push(
