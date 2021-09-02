@@ -555,9 +555,9 @@ questionNumber5[0].push(
   new Song ('Because You Move Me', 'Tinlicker, Helsloot', 'Because You Move'),
   new Song ('One Dance', 'Drake', 'One Dance'),
   new Song ('Bad Guy','Billie Eilish', 'When We All Fall Asleep, Where Do We Go'),
-  new Song ('Despacito', 'Luis Fonsi, Daddy Yankee', 'F*CK LOVE 3: OVER YOU'),
+  new Song ('My Ex\'s Best Friend', 'Machine Gun Kelly, blackbear', 'Ticket\'s To My DownFall'),
   new Song ('See You Again', 'Wiz Khalifa, Charlie Puth', 'See You Again'),
-  new Song ('Uptown Funk', 'Mark Ronson, Bruno Mars', 'Uptown Special'),
+  new Song ('Leave the Door Open', 'Silk Sonic', 'Uptown Special'),
   new Song ('Gangnam Style', 'PSY', 'Gangnam Style'),
   new Song ('Roar','Katy Perry', 'Prism'),
 );
